@@ -30,12 +30,12 @@ class DataCell: UITableViewCell {
     }
 
     func configure(_ item : ClassList){
-        item.subjectName = subjectName.text
-        item.subjectType = subjectType.text
-        item.professorName = professorName.text
-        item.attendance = attendance.text
-        item.lectureRoom = lectureRoom.text
-        item.lectureTime = lectureTime.text
+        subjectName.text = item.subjectName
+        subjectType.text = item.subjectType
+        professorName.text = item.professorName
+        attendance.text = item.attendance
+        lectureRoom.text = item.lectureRoom
+        lectureTime.text = item.lectureTime
     }
     
 }
