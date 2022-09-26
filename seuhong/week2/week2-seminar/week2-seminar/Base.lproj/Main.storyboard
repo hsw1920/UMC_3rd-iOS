@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week2_seminar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8월 1일 월요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-wq-Iy9">
+                                <rect key="frame" x="20" y="67" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투데이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5f-fP-kl7">
+                                <rect key="frame" x="20" y="108" width="78" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-T7-CM1">
+                                <rect key="frame" x="301" y="101" width="69" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="profileButtonDidtap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFP-Mv-tng"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znb-u2-AvG">
+                                <rect key="frame" x="20" y="164" width="350" height="350"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-nT-FbA">
+                                        <rect key="frame" x="20" y="230" width="200" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="NcM-MZ-lXJ"/>
+                                            <constraint firstAttribute="width" constant="200" id="bbq-MU-nV0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="C8y-nT-FbA" firstAttribute="leading" secondItem="Znb-u2-AvG" secondAttribute="leading" constant="20" id="Acl-Kg-Q4J"/>
+                                    <constraint firstAttribute="width" secondItem="Znb-u2-AvG" secondAttribute="height" multiplier="1:1" id="WtE-lK-Wi6"/>
+                                    <constraint firstAttribute="bottom" secondItem="C8y-nT-FbA" secondAttribute="bottom" constant="20" id="boT-eR-8fp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Znb-u2-AvG" secondAttribute="trailing" constant="20" id="4Qx-da-3Cb"/>
+                            <constraint firstItem="G5f-fP-kl7" firstAttribute="leading" secondItem="qe1-wq-Iy9" secondAttribute="leading" id="JIX-F7-XmG"/>
+                            <constraint firstItem="8xp-T7-CM1" firstAttribute="centerY" secondItem="G5f-fP-kl7" secondAttribute="centerY" id="P6u-ar-WPU"/>
+                            <constraint firstItem="G5f-fP-kl7" firstAttribute="top" secondItem="qe1-wq-Iy9" secondAttribute="bottom" constant="20" id="cSQ-wB-AsE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8xp-T7-CM1" secondAttribute="trailing" constant="20" id="ca7-01-IWf"/>
+                            <constraint firstItem="Znb-u2-AvG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nJR-Sc-2XM"/>
+                            <constraint firstItem="qe1-wq-Iy9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rxs-eb-Aoi"/>
+                            <constraint firstItem="Znb-u2-AvG" firstAttribute="top" secondItem="G5f-fP-kl7" secondAttribute="bottom" constant="20" id="uSL-cw-KPD"/>
+                            <constraint firstItem="qe1-wq-Iy9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x5X-5C-Pqp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileButton" destination="8xp-T7-CM1" id="GKM-yx-voF"/>
+                        <outlet property="todayLabel" destination="G5f-fP-kl7" id="oXv-es-fZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.846153846153847" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
