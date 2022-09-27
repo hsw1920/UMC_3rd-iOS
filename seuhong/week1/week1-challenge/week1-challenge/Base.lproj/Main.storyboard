@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5o7-wN-8UN">
-                                <rect key="frame" x="0.0" y="91" width="390" height="85"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="soy-XN-jqo">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW4-RI-bA2">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="30.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홍승완 [20220921] 수요일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQU-Sq-lXX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="30.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -41,10 +41,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxx-p2-nev">
-                                                <rect key="frame" x="0.0" y="34" width="390" height="34"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333329" width="390" height="30.333333333333329"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-09-21 (20:48:49) 1주차/16주" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8x-lA-70X">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="30.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -59,10 +59,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-up-E7b">
-                                                <rect key="frame" x="0.0" y="68" width="390" height="17"/>
+                                                <rect key="frame" x="0.0" y="60.666666666666664" width="390" height="19.333333333333336"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강의 시간표 (2022-09-21)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYb-6L-ke4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -78,9 +78,9 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="qW4-RI-bA2" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.4" id="59x-zL-D5l"/>
-                                            <constraint firstItem="3iC-up-E7b" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.2" id="SZJ-af-R4R"/>
-                                            <constraint firstItem="yxx-p2-nev" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.4" id="m53-7q-p7f"/>
+                                            <constraint firstItem="qW4-RI-bA2" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.38" id="59x-zL-D5l"/>
+                                            <constraint firstItem="3iC-up-E7b" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.24" id="SZJ-af-R4R"/>
+                                            <constraint firstItem="yxx-p2-nev" firstAttribute="height" secondItem="soy-XN-jqo" secondAttribute="height" multiplier="0.38" id="m53-7q-p7f"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -89,12 +89,12 @@
                                     <constraint firstItem="soy-XN-jqo" firstAttribute="top" secondItem="5o7-wN-8UN" secondAttribute="top" id="ASr-4p-jlk"/>
                                     <constraint firstAttribute="bottom" secondItem="soy-XN-jqo" secondAttribute="bottom" id="H4F-Sf-BHs"/>
                                     <constraint firstItem="soy-XN-jqo" firstAttribute="leading" secondItem="5o7-wN-8UN" secondAttribute="leading" id="oaA-uj-ku2"/>
-                                    <constraint firstAttribute="height" constant="85" id="xSi-39-jtr"/>
+                                    <constraint firstAttribute="height" constant="80" id="xSi-39-jtr"/>
                                     <constraint firstAttribute="trailing" secondItem="soy-XN-jqo" secondAttribute="trailing" id="xsW-l6-9u2"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m1v-3u-ZTI">
-                                <rect key="frame" x="0.0" y="176" width="390" height="668"/>
+                                <rect key="frame" x="0.0" y="171" width="390" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataCell" rowHeight="104" id="HJL-XS-mE7" customClass="DataCell" customModule="week1_challenge" customModuleProvider="target">
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810.7692307692307" y="-37.677725118483409"/>
+            <point key="canvasLocation" x="928" y="-31"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jvc-A4-7gO">
