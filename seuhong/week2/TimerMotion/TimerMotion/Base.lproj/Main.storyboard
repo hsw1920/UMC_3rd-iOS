@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerMotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxZ-Gj-ITX">
+                                <rect key="frame" x="0.0" y="47" width="390" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-yP-Wcp">
+                                        <rect key="frame" x="110" y="156.33333333333334" width="170" height="77.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="65"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BDI-yP-Wcp" firstAttribute="centerY" secondItem="pxZ-Gj-ITX" secondAttribute="centerY" id="JBc-iZ-uxl"/>
+                                    <constraint firstAttribute="width" secondItem="pxZ-Gj-ITX" secondAttribute="height" multiplier="1:1" id="cs0-HW-hSx"/>
+                                    <constraint firstItem="BDI-yP-Wcp" firstAttribute="centerX" secondItem="pxZ-Gj-ITX" secondAttribute="centerX" id="lfR-dG-czf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZA-Od-JTs">
+                                <rect key="frame" x="127.66666666666669" y="537" width="135" height="110.66666666666663"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play.circle" catalog="system" renderingMode="template"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="75" weight="light"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTimerStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdc-hI-ECr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.37647058820000001" green="0.25490196079999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pxZ-Gj-ITX" secondAttribute="trailing" id="U8V-bR-fx2"/>
+                            <constraint firstItem="wZA-Od-JTs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a1t-1V-rdc"/>
+                            <constraint firstItem="pxZ-Gj-ITX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iEb-Po-cPg"/>
+                            <constraint firstItem="wZA-Od-JTs" firstAttribute="top" secondItem="pxZ-Gj-ITX" secondAttribute="bottom" constant="100" id="pX3-5R-Vzt"/>
+                            <constraint firstItem="pxZ-Gj-ITX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y0W-4Z-I9L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="BDI-yP-Wcp" id="t67-by-WAP"/>
+                        <outlet property="toggleButton" destination="wZA-Od-JTs" id="pzZ-Ly-wK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>
