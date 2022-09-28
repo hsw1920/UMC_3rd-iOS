@@ -45,8 +45,6 @@ class MainViewController: UIViewController {
         registerBtn.configuration?.background.strokeWidth = 1
     }
     
-    
-    // sideMenu속성은 SideMenuNav객체로 지정
     func setUpSideMenuNavigationVC(vc: MainViewController, next_vc: SideMenuNavigationController) {
 
         next_vc.sideMenuDelegate = vc
@@ -56,7 +54,6 @@ class MainViewController: UIViewController {
         next_vc.presentationStyle.backgroundColor = .black
         next_vc.presentationStyle.presentingEndAlpha = 0.5
         next_vc.presentDuration = 0.7
-        
     }
     
 }
