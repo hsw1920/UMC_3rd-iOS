@@ -234,34 +234,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="278"/>
+            <point key="canvasLocation" x="1453.7383177570093" y="277.96976241900649"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="tux-Of-y1I">
             <objects>
-                <viewController storyboardIdentifier="SideMenuViewController" id="Dcf-uR-9oc" customClass="SideMenuViewController" customModule="week2_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuViewController" id="Dcf-uR-9oc" customClass="SideMenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wd8-0C-BM3">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-fk-tk7">
-                                <rect key="frame" x="128.66666666666666" y="442" width="170.99999999999997" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zR4-62-U1z">
+                                <rect key="frame" x="0.0" y="91" width="428" height="801"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-fk-tk7">
+                                        <rect key="frame" x="128.66666666666666" y="379.66666666666669" width="170.99999999999997" height="42"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="zOf-fk-tk7" firstAttribute="centerY" secondItem="zR4-62-U1z" secondAttribute="centerY" id="5Ui-EO-sLM"/>
+                                    <constraint firstItem="zOf-fk-tk7" firstAttribute="centerX" secondItem="zR4-62-U1z" secondAttribute="centerX" id="LB2-QP-Ha8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FMh-aP-8Ma"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zOf-fk-tk7" firstAttribute="centerY" secondItem="Wd8-0C-BM3" secondAttribute="centerY" id="bGe-lc-LZj"/>
-                            <constraint firstItem="zOf-fk-tk7" firstAttribute="centerX" secondItem="Wd8-0C-BM3" secondAttribute="centerX" id="sd1-Cr-x6J"/>
+                            <constraint firstItem="zR4-62-U1z" firstAttribute="top" secondItem="FMh-aP-8Ma" secondAttribute="top" id="0QP-ha-3Ny"/>
+                            <constraint firstItem="FMh-aP-8Ma" firstAttribute="trailing" secondItem="zR4-62-U1z" secondAttribute="trailing" id="6yN-4C-nvm"/>
+                            <constraint firstItem="zR4-62-U1z" firstAttribute="leading" secondItem="FMh-aP-8Ma" secondAttribute="leading" id="nuW-Fk-thd"/>
+                            <constraint firstItem="FMh-aP-8Ma" firstAttribute="bottom" secondItem="zR4-62-U1z" secondAttribute="bottom" id="zfl-84-8pa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dfp-aN-p7X">
+                        <barButtonItem key="leftBarButtonItem" image="house" catalog="system" style="plain" id="Lv8-Fc-Bge">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" style="plain" id="CqB-kN-KPn">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="presentDuration">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zdk-Xb-AXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144" y="277"/>
+            <point key="canvasLocation" x="755.60747663551399" y="276.67386609071275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PUt-JV-b1I">
@@ -284,6 +309,24 @@
             </objects>
             <point key="canvasLocation" x="554" y="-419"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4mZ-jl-fD4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="91P-Sj-kqZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kPR-8S-B9t">
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dcf-uR-9oc" kind="relationship" relationship="rootViewController" id="ACY-cL-3q3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJi-jD-7AO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144.39252336448598" y="276.67386609071275"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MyHeart" width="390" height="349.33334350585938"/>
@@ -293,6 +336,8 @@
         <image name="Mygift" width="570" height="538"/>
         <image name="Myorder" width="570" height="534"/>
         <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">

@@ -6,28 +6,37 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainViewController: UIViewController {
-
+    
     
     
     @IBOutlet weak var sideMenuButton: UIBarButtonItem!
-
+    
     
     @IBOutlet weak var registerBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         customSetting()
         
-            }
+        
+        
+        
+        
+    }
     
     
     @IBAction func sideMenuBtnTapped(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SideMenuViewController")
         
         //present(vc, animated: true)
-        navigationController?.pushViewController(vc, animated: true)
+        //navigationController?.pushViewController(vc, animated: true)
+        
+        let sideMenu = SideMenuNavigationController(rootViewController: vc)
+        setUpSideMenuNavigationVC(vc: self, next_vc: sideMenu)
+        present(sideMenu, animated: true, completion: nil)
     }
     
     func customSetting() {
@@ -36,5 +45,24 @@ class MainViewController: UIViewController {
         registerBtn.configuration?.background.strokeWidth = 1
     }
     
+    
+    // sideMenu속성은 SideMenuNav객체로 지정
+    func setUpSideMenuNavigationVC(vc: MainViewController, next_vc: SideMenuNavigationController) {
+
+        next_vc.sideMenuDelegate = vc
+        next_vc.presentationStyle = .menuSlideIn
+        next_vc.leftSide = true
+        next_vc.menuWidth = (view.bounds.width / 5) * 3
+        next_vc.presentationStyle.backgroundColor = .black
+        next_vc.presentationStyle.presentingEndAlpha = 0.5
+        next_vc.presentDuration = 0.7
+        
+    }
+    
 }
+
+extension MainViewController: SideMenuNavigationControllerDelegate {
+
+}
+
 

@@ -14,6 +14,7 @@
 		601E750728E2BAF600F0A5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601E750528E2BAF600F0A5DB /* LaunchScreen.storyboard */; };
 		601E750F28E2BCB100F0A5DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E750E28E2BCB100F0A5DB /* MainViewController.swift */; };
 		609409AA28E3B5360087CE2B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609409A928E3B5360087CE2B /* SideMenuViewController.swift */; };
+		609409AD28E3CEFA0087CE2B /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 609409AC28E3CEFA0087CE2B /* SideMenu */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609409AD28E3CEFA0087CE2B /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = "week2-challenge";
+			packageProductDependencies = (
+				609409AC28E3CEFA0087CE2B /* SideMenu */,
+			);
 			productName = "week2-challenge";
 			productReference = 601E74F728E2BAF400F0A5DB /* week2-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 601E74EE28E2BAF400F0A5DB;
+			packageReferences = (
+				609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 601E74F828E2BAF400F0A5DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		609409AC28E3CEFA0087CE2B /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 601E74EF28E2BAF400F0A5DB /* Project object */;
 }
