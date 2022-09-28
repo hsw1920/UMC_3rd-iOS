@@ -13,6 +13,8 @@
 		601E750428E2BAF600F0A5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601E750328E2BAF600F0A5DB /* Assets.xcassets */; };
 		601E750728E2BAF600F0A5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601E750528E2BAF600F0A5DB /* LaunchScreen.storyboard */; };
 		601E750F28E2BCB100F0A5DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601E750E28E2BCB100F0A5DB /* MainViewController.swift */; };
+		609409AA28E3B5360087CE2B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609409A928E3B5360087CE2B /* SideMenuViewController.swift */; };
+		609409AD28E3CEFA0087CE2B /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 609409AC28E3CEFA0087CE2B /* SideMenu */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		601E750628E2BAF600F0A5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		601E750828E2BAF600F0A5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601E750E28E2BCB100F0A5DB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		609409A928E3B5360087CE2B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609409AD28E3CEFA0087CE2B /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 				601E74FC28E2BAF400F0A5DB /* SceneDelegate.swift */,
 				601E750028E2BAF500F0A5DB /* Main.storyboard */,
 				601E750E28E2BCB100F0A5DB /* MainViewController.swift */,
+				609409A928E3B5360087CE2B /* SideMenuViewController.swift */,
 				601E750328E2BAF600F0A5DB /* Assets.xcassets */,
 				601E750528E2BAF600F0A5DB /* LaunchScreen.storyboard */,
 				601E750828E2BAF600F0A5DB /* Info.plist */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "week2-challenge";
+			packageProductDependencies = (
+				609409AC28E3CEFA0087CE2B /* SideMenu */,
+			);
 			productName = "week2-challenge";
 			productReference = 601E74F728E2BAF400F0A5DB /* week2-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 601E74EE28E2BAF400F0A5DB;
+			packageReferences = (
+				609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 601E74F828E2BAF400F0A5DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609409AA28E3B5360087CE2B /* SideMenuViewController.swift in Sources */,
 				601E750F28E2BCB100F0A5DB /* MainViewController.swift in Sources */,
 				601E74FB28E2BAF400F0A5DB /* AppDelegate.swift in Sources */,
 				601E74FD28E2BAF400F0A5DB /* SceneDelegate.swift in Sources */,
@@ -293,8 +305,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +332,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		609409AC28E3CEFA0087CE2B /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 609409AB28E3CEFA0087CE2B /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 601E74EF28E2BAF400F0A5DB /* Project object */;
 }
