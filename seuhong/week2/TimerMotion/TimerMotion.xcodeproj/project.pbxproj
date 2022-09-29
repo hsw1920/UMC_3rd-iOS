@@ -13,7 +13,6 @@
 		60EBF40628E452EF004B7C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EBF40428E452EF004B7C4B /* Main.storyboard */; };
 		60EBF40828E452F0004B7C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EBF40728E452F0004B7C4B /* Assets.xcassets */; };
 		60EBF40B28E452F0004B7C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EBF40928E452F0004B7C4B /* LaunchScreen.storyboard */; };
-		60EBF41628E4746E004B7C4B /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 60EBF41528E4746E004B7C4B /* HGCircularSlider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EBF41628E4746E004B7C4B /* HGCircularSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +84,6 @@
 			);
 			name = TimerMotion;
 			packageProductDependencies = (
-				60EBF41528E4746E004B7C4B /* HGCircularSlider */,
 			);
 			productName = TimerMotion;
 			productReference = 60EBF3FB28E452EF004B7C4B /* TimerMotion.app */;
@@ -117,7 +114,6 @@
 			);
 			mainGroup = 60EBF3F228E452EF004B7C4B;
 			packageReferences = (
-				60EBF41428E4746E004B7C4B /* XCRemoteSwiftPackageReference "HGCircularSlider" */,
 			);
 			productRefGroup = 60EBF3FC28E452EF004B7C4B /* Products */;
 			projectDirPath = "";
@@ -366,25 +362,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		60EBF41428E4746E004B7C4B /* XCRemoteSwiftPackageReference "HGCircularSlider" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HamzaGhazouani/HGCircularSlider";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		60EBF41528E4746E004B7C4B /* HGCircularSlider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 60EBF41428E4746E004B7C4B /* XCRemoteSwiftPackageReference "HGCircularSlider" */;
-			productName = HGCircularSlider;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60EBF3F328E452EF004B7C4B /* Project object */;
 }
