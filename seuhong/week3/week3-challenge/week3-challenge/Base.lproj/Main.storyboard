@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Memo View Controller-->
+        <!--내 메모장-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MemoViewController" id="BYZ-38-t0r" customClass="MemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                             <constraint firstItem="hiF-NE-veh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aYe-Tv-YhJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WJr-nE-g2z">
+                    <navigationItem key="navigationItem" title="내 메모장" id="WJr-nE-g2z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="29g-t2-x6t">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="-28.125"/>
         </scene>
-        <!--Detail Memo View Controller-->
+        <!--메모 수정-->
         <scene sceneID="c15-e2-o3P">
             <objects>
                 <viewController storyboardIdentifier="DetailMemoViewController" id="ZKf-aW-5sW" customClass="DetailMemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,19 +77,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfU-hJ-n9g" userLabel="제목 :">
-                                <rect key="frame" x="15" y="107" width="49.5" height="81.5"/>
+                                <rect key="frame" x="15" y="159" width="49.5" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="jFr-jP-7hR">
-                                <rect key="frame" x="74.5" y="135" width="289.5" height="25.5"/>
+                                <rect key="frame" x="74.5" y="187" width="289.5" height="25.5"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-Tb-5A5">
-                                <rect key="frame" x="0.0" y="203.5" width="414" height="630.5"/>
+                                <rect key="frame" x="0.0" y="255.5" width="414" height="578.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4BY-hv-GND">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
@@ -129,7 +129,7 @@
                             <constraint firstItem="Df7-Tb-5A5" firstAttribute="centerX" secondItem="TOI-8h-RHm" secondAttribute="centerX" id="skS-zF-Zfh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="H2C-qI-pZC"/>
+                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC"/>
                     <connections>
                         <outlet property="detailMemo" destination="4BY-hv-GND" id="DDr-8F-jau"/>
                         <outlet property="detailTitle" destination="jFr-jP-7hR" id="qzt-w8-wXf"/>
@@ -139,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="2760.8695652173915" y="-28.125"/>
         </scene>
-        <!--New Memo View Controller-->
+        <!--새 메모-->
         <scene sceneID="8O3-qj-oS6">
             <objects>
                 <viewController storyboardIdentifier="NewMemoViewController" id="YZw-AH-dSl" customClass="NewMemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,7 +197,7 @@
                             <constraint firstItem="p83-Xb-qAI" firstAttribute="top" secondItem="aWu-jt-7Jz" secondAttribute="top" constant="15" id="qfa-Nt-T58"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="I5s-5L-u6J"/>
+                    <navigationItem key="navigationItem" title="새 메모" id="I5s-5L-u6J"/>
                     <connections>
                         <outlet property="newMemo" destination="hzW-n6-PHj" id="nUI-TH-SjJ"/>
                         <outlet property="newMemoTitle" destination="KrG-sR-TWw" id="GRC-6X-BfE"/>
@@ -212,8 +212,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L30-De-N0g" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="raR-ex-bgG">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="raR-ex-bgG">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -230,8 +230,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zfP-xt-cXf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YVE-jY-Gvc">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="YVE-jY-Gvc">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
