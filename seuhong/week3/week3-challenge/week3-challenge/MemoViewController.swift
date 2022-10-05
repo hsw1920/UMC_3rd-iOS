@@ -7,30 +7,66 @@
 
 import UIKit
 
-class MemoViewController: UIViewController {
-
+class MemoViewController: UIViewController, NewMemoProtocol {
+    
     @IBOutlet weak var tableView: UITableView!
     
-    let list = Memo.list
+    var list = Memo.list
+    var detailList = DetailMemo.MemoList
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.reloadData()
 
     }
     
-
+    @IBAction func addMemo(_ sender: UIBarButtonItem) {
+        // newMemo
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "NewMemoViewController") as? NewMemoViewController else { return }
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        
+        //list.append(Memo(titleLabel: "123123"))
+        
+//        for i in detailList {
+//            print(i.detailMemo)
+//        }
+    }
+    
+    func setHome(item: Memo) {
+        list.append(item)
+    }
+    
+    func setDetail(item: DetailMemo) {
+        detailList.append(item)
+    }
+    
+    
+    
 }
+
+
+// MARK: - extension
 
 extension MemoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailMemoViewController") as? DetailMemoViewController else { return }
+        
         vc.index = indexPath.row
+        vc.homeMemo = list
+        vc.detailMemoList = detailList
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
 extension MemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

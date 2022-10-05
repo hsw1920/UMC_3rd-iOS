@@ -8,16 +8,16 @@
 import Foundation
 
 class Memo {
-    let titleLabel: String
+    var titleLabel: String
     init(titleLabel: String) {
         self.titleLabel = titleLabel
     }
 
     static var list: [Memo] = [
-            Memo(titleLabel: "First"),
-            Memo(titleLabel: "Second"),
-            Memo(titleLabel: "Third"),
-            Memo(titleLabel: "Four"),
+//            Memo(titleLabel: "First"),
+//            Memo(titleLabel: "Second"),
+//            Memo(titleLabel: "Third"),
+//            Memo(titleLabel: "Four"),
     ]
 
 }

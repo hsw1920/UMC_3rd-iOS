@@ -17,6 +17,7 @@
 		6032461028ED35690033B194 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032460F28ED35690033B194 /* MemoCell.swift */; };
 		6032461228ED3B120033B194 /* DetailMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032461128ED3B120033B194 /* DetailMemoViewController.swift */; };
 		60761F6F28ED4D9E0043804B /* DetailMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60761F6E28ED4D9E0043804B /* DetailMemo.swift */; };
+		6090914F28ED5AC200B12D9F /* NewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6090914E28ED5AC200B12D9F /* NewMemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6032460F28ED35690033B194 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		6032461128ED3B120033B194 /* DetailMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoViewController.swift; sourceTree = "<group>"; };
 		60761F6E28ED4D9E0043804B /* DetailMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemo.swift; sourceTree = "<group>"; };
+		6090914E28ED5AC200B12D9F /* NewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,8 @@
 				603245F728ED31960033B194 /* SceneDelegate.swift */,
 				603245FB28ED31960033B194 /* Main.storyboard */,
 				6032460F28ED35690033B194 /* MemoCell.swift */,
-				60761F6E28ED4D9E0043804B /* DetailMemo.swift */,
-				6032461128ED3B120033B194 /* DetailMemoViewController.swift */,
+				6090914E28ED5AC200B12D9F /* NewMemoViewController.swift */,
+				6090914D28ED5A8400B12D9F /* DetailMemo */,
 				6032460928ED35170033B194 /* MemoViewController.swift */,
 				6032460D28ED35410033B194 /* Memo.swift */,
 				603245FE28ED31970033B194 /* Assets.xcassets */,
@@ -77,6 +79,15 @@
 				6032460328ED31970033B194 /* Info.plist */,
 			);
 			path = "week3-challenge";
+			sourceTree = "<group>";
+		};
+		6090914D28ED5A8400B12D9F /* DetailMemo */ = {
+			isa = PBXGroup;
+			children = (
+				60761F6E28ED4D9E0043804B /* DetailMemo.swift */,
+				6032461128ED3B120033B194 /* DetailMemoViewController.swift */,
+			);
+			path = DetailMemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 				6032460A28ED35170033B194 /* MemoViewController.swift in Sources */,
 				60761F6F28ED4D9E0043804B /* DetailMemo.swift in Sources */,
 				6032460E28ED35410033B194 /* Memo.swift in Sources */,
+				6090914F28ED5AC200B12D9F /* NewMemoViewController.swift in Sources */,
 				6032461028ED35690033B194 /* MemoCell.swift in Sources */,
 				6032461228ED3B120033B194 /* DetailMemoViewController.swift in Sources */,
 			);

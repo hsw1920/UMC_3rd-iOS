@@ -11,6 +11,7 @@ class DetailMemoViewController: UIViewController {
     @IBOutlet weak var detailTitle: UITextField!
     @IBOutlet weak var detailMemo: UITextView!
     
+    var homeMemo = Memo.list
     var detailMemoList = DetailMemo.MemoList
     var index = Int()
     override func viewDidLoad() {
@@ -19,15 +20,21 @@ class DetailMemoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
         detailTitle.text = detailMemoList[index].detailTitle
         detailMemo.text = detailMemoList[index].detailMemo
+
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
+        //home title 변경
+        homeMemo[index].titleLabel = detailTitle.text!
+        //detail 변경
         detailMemoList[index].detailTitle = detailTitle.text!
         detailMemoList[index].detailMemo = detailMemo.text!
-        loadView()
-        print(detailMemoList[index].detailMemo)
+        
+        
+        
     }
     
     
