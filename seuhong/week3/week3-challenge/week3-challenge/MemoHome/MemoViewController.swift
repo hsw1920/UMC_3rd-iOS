@@ -13,13 +13,13 @@ class MemoViewController: UIViewController, NewMemoProtocol {
     
     var list = Memo.list
     var detailList = DetailMemo.MemoList
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.reloadData()
-
+        //tableView.reloadData()
     }
     
     @IBAction func addMemo(_ sender: UIBarButtonItem) {
@@ -28,18 +28,13 @@ class MemoViewController: UIViewController, NewMemoProtocol {
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
         
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("MemoHome will appear")
         tableView.reloadData()
-        
-        //list.append(Memo(titleLabel: "123123"))
-        
-//        for i in detailList {
-//            print(i.detailMemo)
-//        }
+        print("Table contents are reloaded")
+        print("-----------------")
     }
     
     func setHome(item: Memo) {
@@ -50,12 +45,10 @@ class MemoViewController: UIViewController, NewMemoProtocol {
         detailList.append(item)
     }
     
-    
-    
 }
 
 
-// MARK: - extension
+// MARK: - extension Delegate & DataSource
 
 extension MemoViewController: UITableViewDelegate {
     

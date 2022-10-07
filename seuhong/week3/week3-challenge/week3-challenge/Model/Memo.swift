@@ -14,10 +14,9 @@ class Memo {
     }
 
     static var list: [Memo] = [
-//            Memo(titleLabel: "First"),
-//            Memo(titleLabel: "Second"),
-//            Memo(titleLabel: "Third"),
-//            Memo(titleLabel: "Four"),
+            Memo(titleLabel: "새 메모"),
+            Memo(titleLabel: "새 메모2"),
+
     ]
 
 }

@@ -47,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6003B99128ED843B00C4B9F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60761F6E28ED4D9E0043804B /* DetailMemo.swift */,
+				6032460D28ED35410033B194 /* Memo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6003B99228ED845900C4B9F1 /* NewMemo */ = {
+			isa = PBXGroup;
+			children = (
+				6090914E28ED5AC200B12D9F /* NewMemoViewController.swift */,
+			);
+			path = NewMemo;
+			sourceTree = "<group>";
+		};
+		6003B99328ED847800C4B9F1 /* MemoHome */ = {
+			isa = PBXGroup;
+			children = (
+				6032460928ED35170033B194 /* MemoViewController.swift */,
+				6032460F28ED35690033B194 /* MemoCell.swift */,
+			);
+			path = MemoHome;
+			sourceTree = "<group>";
+		};
 		603245E928ED31960033B194 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +95,10 @@
 				603245F528ED31960033B194 /* AppDelegate.swift */,
 				603245F728ED31960033B194 /* SceneDelegate.swift */,
 				603245FB28ED31960033B194 /* Main.storyboard */,
-				6032460F28ED35690033B194 /* MemoCell.swift */,
-				6090914E28ED5AC200B12D9F /* NewMemoViewController.swift */,
+				6003B99228ED845900C4B9F1 /* NewMemo */,
 				6090914D28ED5A8400B12D9F /* DetailMemo */,
-				6032460928ED35170033B194 /* MemoViewController.swift */,
-				6032460D28ED35410033B194 /* Memo.swift */,
+				6003B99328ED847800C4B9F1 /* MemoHome */,
+				6003B99128ED843B00C4B9F1 /* Model */,
 				603245FE28ED31970033B194 /* Assets.xcassets */,
 				6032460028ED31970033B194 /* LaunchScreen.storyboard */,
 				6032460328ED31970033B194 /* Info.plist */,
@@ -84,7 +109,6 @@
 		6090914D28ED5A8400B12D9F /* DetailMemo */ = {
 			isa = PBXGroup;
 			children = (
-				60761F6E28ED4D9E0043804B /* DetailMemo.swift */,
 				6032461128ED3B120033B194 /* DetailMemoViewController.swift */,
 			);
 			path = DetailMemo;

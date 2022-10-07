@@ -26,27 +26,23 @@ class NewMemoViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("NewMemoVC will appear")
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        print("newMemo will disappear")
+        print("NewMemoVC will disappear")
         
-//        for i in memoList {
-//            print(i.titleLabel)
-//        }
-//        print("---------------")
         // home table의 DB에 title 추가
         let saveTitle = Memo(titleLabel: newMemoTitle.text!)
-        //memoList.append(saveTitle)
         delegate?.setHome(item: saveTitle)
         
-//        for i in memoList {
-//            print(i.titleLabel)
-//        }
-//        print("---------------")
         // detail memo의 DB에 추가
         let saveDetailMemo = DetailMemo(detailTitle: newMemoTitle.text!, detailMemo: newMemo.text!)
         delegate?.setDetail(item: saveDetailMemo)
-        //detailMemoList.append(saveDetailMemo)
         
+        print("NewMemo is saved")
+        print("-----------------")
     }
 
 }
