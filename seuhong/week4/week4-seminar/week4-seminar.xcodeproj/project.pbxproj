@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		60A00E0828F5381E005F1761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E0728F5381E005F1761 /* AppDelegate.swift */; };
 		60A00E0A28F5381E005F1761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E0928F5381E005F1761 /* SceneDelegate.swift */; };
-		60A00E0C28F5381E005F1761 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E0B28F5381E005F1761 /* ViewController.swift */; };
 		60A00E0F28F5381E005F1761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A00E0D28F5381E005F1761 /* Main.storyboard */; };
 		60A00E1128F5381F005F1761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A00E1028F5381F005F1761 /* Assets.xcassets */; };
 		60A00E1428F5381F005F1761 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A00E1228F5381F005F1761 /* LaunchScreen.storyboard */; };
+		60A00E1C28F549CC005F1761 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E1B28F549CC005F1761 /* FirstViewController.swift */; };
+		60A00E1E28F54A04005F1761 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E1D28F54A04005F1761 /* SecondViewController.swift */; };
+		60A00E2028F5544E005F1761 /* KakaoTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A00E1F28F5544E005F1761 /* KakaoTalkViewController.swift */; };
+		60AA803028F558E900BF20A0 /* KakaoTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AA802F28F558E900BF20A0 /* KakaoTalkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60A00E0428F5381E005F1761 /* week4-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week4-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A00E0728F5381E005F1761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A00E0928F5381E005F1761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		60A00E0B28F5381E005F1761 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		60A00E0E28F5381E005F1761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60A00E1028F5381F005F1761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A00E1328F5381F005F1761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A00E1528F5381F005F1761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A00E1B28F549CC005F1761 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		60A00E1D28F54A04005F1761 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		60A00E1F28F5544E005F1761 /* KakaoTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkViewController.swift; sourceTree = "<group>"; };
+		60AA802F28F558E900BF20A0 /* KakaoTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTalkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +64,11 @@
 			children = (
 				60A00E0728F5381E005F1761 /* AppDelegate.swift */,
 				60A00E0928F5381E005F1761 /* SceneDelegate.swift */,
-				60A00E0B28F5381E005F1761 /* ViewController.swift */,
 				60A00E0D28F5381E005F1761 /* Main.storyboard */,
+				60A00E1F28F5544E005F1761 /* KakaoTalkViewController.swift */,
+				60AA802F28F558E900BF20A0 /* KakaoTalkTableViewCell.swift */,
+				60A00E1B28F549CC005F1761 /* FirstViewController.swift */,
+				60A00E1D28F54A04005F1761 /* SecondViewController.swift */,
 				60A00E1028F5381F005F1761 /* Assets.xcassets */,
 				60A00E1228F5381F005F1761 /* LaunchScreen.storyboard */,
 				60A00E1528F5381F005F1761 /* Info.plist */,
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A00E0C28F5381E005F1761 /* ViewController.swift in Sources */,
+				60A00E2028F5544E005F1761 /* KakaoTalkViewController.swift in Sources */,
+				60AA803028F558E900BF20A0 /* KakaoTalkTableViewCell.swift in Sources */,
+				60A00E1E28F54A04005F1761 /* SecondViewController.swift in Sources */,
+				60A00E1C28F549CC005F1761 /* FirstViewController.swift in Sources */,
 				60A00E0828F5381E005F1761 /* AppDelegate.swift in Sources */,
 				60A00E0A28F5381E005F1761 /* SceneDelegate.swift in Sources */,
 			);
