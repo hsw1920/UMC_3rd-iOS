@@ -3,15 +3,17 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--내 메모장-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MemoViewController" id="BYZ-38-t0r" customClass="MemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoViewController" id="BYZ-38-t0r" customClass="MemoViewController" customModule="week4_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoCell" textLabel="xky-hz-fPx" style="IBUITableViewCellStyleDefault" id="aak-NB-UkS" customClass="MemoCell" customModule="week3_challenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoCell" textLabel="xky-hz-fPx" style="IBUITableViewCellStyleDefault" id="aak-NB-UkS" customClass="MemoCell" customModule="week4_standard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aak-NB-UkS" id="4xB-Th-VDy">
@@ -71,7 +73,7 @@
         <!--메모 수정-->
         <scene sceneID="c15-e2-o3P">
             <objects>
-                <viewController storyboardIdentifier="DetailMemoViewController" id="ZKf-aW-5sW" customClass="DetailMemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailMemoViewController" id="ZKf-aW-5sW" customClass="DetailMemoViewController" customModule="week4_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOI-8h-RHm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +131,18 @@
                             <constraint firstItem="Df7-Tb-5A5" firstAttribute="centerX" secondItem="TOI-8h-RHm" secondAttribute="centerX" id="skS-zF-Zfh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC"/>
+                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC">
+                        <barButtonItem key="rightBarButtonItem" id="8o9-hM-LeX">
+                            <imageReference key="image" image="ellipsis" catalog="system" symbolScale="default"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <menu key="menu" title="Sub Menu" id="0Ee-WW-x2W">
+                                <children>
+                                    <command title="Delete" discoverabilityTitle="" id="ACf-yM-R5V"/>
+                                    <command title="Item 2" id="9bx-yz-jTK"/>
+                                </children>
+                            </menu>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailMemo" destination="4BY-hv-GND" id="DDr-8F-jau"/>
                         <outlet property="detailTitle" destination="jFr-jP-7hR" id="qzt-w8-wXf"/>
@@ -142,7 +155,7 @@
         <!--새 메모-->
         <scene sceneID="8O3-qj-oS6">
             <objects>
-                <viewController storyboardIdentifier="NewMemoViewController" id="YZw-AH-dSl" customClass="NewMemoViewController" customModule="week3_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewMemoViewController" id="YZw-AH-dSl" customClass="NewMemoViewController" customModule="week4_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yma-ob-2O8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,6 +276,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
