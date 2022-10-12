@@ -3,10 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,7 +89,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-Tb-5A5">
-                                <rect key="frame" x="0.0" y="255.5" width="414" height="578.5"/>
+                                <rect key="frame" x="0.0" y="255.5" width="414" height="529.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4BY-hv-GND">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
@@ -115,6 +113,19 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ogU-FQ-5te"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jfa-j3-eHW"/>
                             </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwG-Sx-oS9">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UuS-z1-ROh"/>
+                                    <barButtonItem image="trash" catalog="system" id="JTn-td-bTy">
+                                        <color key="tintColor" red="0.92128556969999997" green="0.026775595579999999" blue="0.021789166249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="deleteBtnTapped:" destination="ZKf-aW-5sW" id="cyF-x6-mu3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yzc-17-XQ2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -131,18 +142,9 @@
                             <constraint firstItem="Df7-Tb-5A5" firstAttribute="centerX" secondItem="TOI-8h-RHm" secondAttribute="centerX" id="skS-zF-Zfh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC">
-                        <barButtonItem key="rightBarButtonItem" id="8o9-hM-LeX">
-                            <imageReference key="image" image="ellipsis" catalog="system" symbolScale="default"/>
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <menu key="menu" title="Sub Menu" id="0Ee-WW-x2W">
-                                <children>
-                                    <command title="Delete" discoverabilityTitle="" id="ACf-yM-R5V"/>
-                                    <command title="Item 2" id="9bx-yz-jTK"/>
-                                </children>
-                            </menu>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailMemo" destination="4BY-hv-GND" id="DDr-8F-jau"/>
                         <outlet property="detailTitle" destination="jFr-jP-7hR" id="qzt-w8-wXf"/>
@@ -276,7 +278,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
