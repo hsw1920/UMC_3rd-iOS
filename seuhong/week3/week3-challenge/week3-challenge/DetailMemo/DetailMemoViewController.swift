@@ -11,8 +11,8 @@ class DetailMemoViewController: UIViewController {
     @IBOutlet weak var detailTitle: UITextField!
     @IBOutlet weak var detailMemo: UITextView!
     
-    var homeMemo = Memo.list
-    var detailMemoList = DetailMemo.MemoList
+//    var homeMemo = Memo.list
+//    var detailMemoList = DetailMemo.MemoList
     var index = IndexPath()
     
     var delegate: DeleteMemoProtocol?
@@ -22,6 +22,7 @@ class DetailMemoViewController: UIViewController {
         case delete
     }
     
+    // 기본 edit 상태
     var state = CurrentState.edit
     
     override func viewDidLoad() {
@@ -31,12 +32,10 @@ class DetailMemoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("DetailVC will appear")
-        for i in homeMemo {
-            print(i.titleLabel)
-        }
-
-        detailTitle.text = detailMemoList[index.row].detailTitle
-        detailMemo.text = detailMemoList[index.row].detailMemo
+        
+        detailTitle.text = DetailMemo.MemoList[index.row].detailTitle
+        detailMemo.text = DetailMemo.MemoList[index.row].detailMemo
+        
         print("Previous contents were loaded")
     }
     
@@ -46,11 +45,13 @@ class DetailMemoViewController: UIViewController {
         switch state {
         case .edit :
             print("현재는 편집상태임")
-            //home title 변경
-            homeMemo[index.row].titleLabel = detailTitle.text!
+            //title 변경
+            Memo.list[index.row].titleLabel = detailTitle.text!
+            
             //detail 변경
-            detailMemoList[index.row].detailTitle = detailTitle.text!
-            detailMemoList[index.row].detailMemo = detailMemo.text!
+            DetailMemo.MemoList[index.row].detailTitle = detailTitle.text!
+            DetailMemo.MemoList[index.row].detailMemo = detailMemo.text!
+            
             
         case .delete:
             print("현재는 삭제된 상태")
@@ -62,10 +63,6 @@ class DetailMemoViewController: UIViewController {
     }
     
     @IBAction func deleteBtnTapped(_ sender: UIBarButtonItem) {
-        detailMemoList.remove(at: index.row)
-        homeMemo.remove(at: index.row)
-        print(detailMemoList.count)
-        print(homeMemo.count)
         state = CurrentState.delete
         self.navigationController?.popViewController(animated: true)
     }

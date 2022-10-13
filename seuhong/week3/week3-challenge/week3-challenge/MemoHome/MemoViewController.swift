@@ -14,15 +14,13 @@ protocol DeleteMemoProtocol {
 class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol {
     
     func deleteMemo(indexPath: IndexPath) {
-        list.remove(at: indexPath.row)
-        detailList.remove(at: indexPath.row)
+        Memo.list.remove(at: indexPath.row)
+        DetailMemo.MemoList.remove(at: indexPath.row)
+        
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var list = Memo.list
-    var detailList = DetailMemo.MemoList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +38,7 @@ class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol 
     
     override func viewWillAppear(_ animated: Bool) {
         print("MemoHome will appear")
+
         tableView.reloadData()
         
         print("Table contents are reloaded")
@@ -47,11 +46,11 @@ class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol 
     }
     
     func setHome(item: Memo) {
-        list.append(item)
+        Memo.list.append(item)
     }
     
     func setDetail(item: DetailMemo) {
-        detailList.append(item)
+        DetailMemo.MemoList.append(item)
     }
     
 }
@@ -65,22 +64,24 @@ extension MemoViewController: UITableViewDelegate {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailMemoViewController") as? DetailMemoViewController else { return }
         vc.delegate = self
         vc.index = indexPath
-        vc.homeMemo = list
-        vc.detailMemoList = detailList
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        <#code#>
+//    }
  
 }
 extension MemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return Memo.list.count
     }
     
     // Swipe 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            list.remove(at: indexPath.row)
-            detailList.remove(at: indexPath.row)
+            Memo.list.remove(at: indexPath.row)
+            DetailMemo.MemoList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             
@@ -100,8 +101,8 @@ extension MemoViewController: UITableViewDataSource {
         } else {
             cell.backgroundColor = .systemBackground
         }
-        
-        cell.configure(item: list[indexPath.row])
+
+        cell.configure(item: Memo.list[indexPath.row])
         return cell
     }
     

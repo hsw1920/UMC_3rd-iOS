@@ -19,8 +19,6 @@ class NewMemoViewController: UIViewController {
     
     var delegate: NewMemoProtocol?
     
-    var memoList = Memo.list
-    var detailMemoList = DetailMemo.MemoList
     override func viewDidLoad() {
         super.viewDidLoad()
 
