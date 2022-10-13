@@ -44,7 +44,7 @@ class DetailMemoViewController: UIViewController {
         
         switch state {
         case .edit :
-            print("현재는 편집상태임")
+            print("현재는 .edit 상태")
             //title 변경
             Memo.list[index.row].titleLabel = detailTitle.text!
             
@@ -54,7 +54,7 @@ class DetailMemoViewController: UIViewController {
             
             
         case .delete:
-            print("현재는 삭제된 상태")
+            print("현재는 .delete 상태")
             delegate?.deleteMemo(indexPath: index)
             
         }

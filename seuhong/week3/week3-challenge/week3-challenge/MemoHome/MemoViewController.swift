@@ -28,10 +28,11 @@ class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol 
         tableView.dataSource = self
     }
     
+    
     @IBAction func addMemo(_ sender: UIBarButtonItem) {
         // newMemo
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "NewMemoViewController") as? NewMemoViewController else { return }
-        vc.delegate = self
+//        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -77,6 +78,8 @@ extension MemoViewController: UITableViewDataSource {
         return Memo.list.count
     }
     
+    
+    
     // Swipe 삭제
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -93,19 +96,23 @@ extension MemoViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        
         // 재사용셀 문제 해결 -> 특정 조건에서 변화를 주었다면,
         // 그 조건에 해당하지 않을 때는 초기화해주는 코드를 작성해야함.
         // 또는 prepareForReuse() 메서드를 활용할 수 있음
+        cell.prepareForReuse()
+        
         if indexPath.row == 0 {
             cell.backgroundColor = .red
-        } else {
-            cell.backgroundColor = .systemBackground
         }
-
+//        else {
+//            cell.backgroundColor = .systemBackground
+//        }
+        
         cell.configure(item: Memo.list[indexPath.row])
         return cell
     }
-    
+
     
 }
 

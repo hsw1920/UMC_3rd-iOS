@@ -21,9 +21,12 @@ class MemoCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        self.backgroundColor = .systemBackground
+    }
+    
     func configure(item: Memo){
         titleLabel.text = item.titleLabel
     }
-    
 
 }
