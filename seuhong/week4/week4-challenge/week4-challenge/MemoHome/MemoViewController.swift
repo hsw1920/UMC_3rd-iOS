@@ -12,6 +12,9 @@ protocol DeleteMemoProtocol {
 }
 
 class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol {
+
+    
+    
     
     func deleteMemo(indexPath: IndexPath) {
         Memo.list.remove(at: indexPath.row)
@@ -68,27 +71,36 @@ extension MemoViewController: UITableViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        <#code#>
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .normal, title: nil) { (UIContextualAction, UIView, success: @escaping (Bool) ->Void) in
+            Memo.list.remove(at: indexPath.row)
+            DetailMemo.MemoList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        delete.backgroundColor = .red
+        delete.image = UIImage(systemName: "trash")
+        
+        let favorite = UIContextualAction(style: .normal, title: nil) { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+            DetailMemo.MemoList[indexPath.row].favorite.toggle()
+            tableView.reloadData()
+        }
+        favorite.backgroundColor = .systemYellow
+        favorite.image = UIImage(systemName: "star.fill")
+        
+        return UISwipeActionsConfiguration(actions: [delete,favorite])
+    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//            if editingStyle == .delete {
+//                print("삭제됨")
+//            }
 //    }
- 
+    
+
 }
 extension MemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Memo.list.count
-    }
-    
-    
-    
-    // Swipe 삭제
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            Memo.list.remove(at: indexPath.row)
-            DetailMemo.MemoList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,12 +115,12 @@ extension MemoViewController: UITableViewDataSource {
         cell.prepareForReuse()
         
         if indexPath.row == 0 {
-            cell.backgroundColor = .red
+//            cell.backgroundColor = .red
         }
 //        else {
 //            cell.backgroundColor = .systemBackground
 //        }
-        
+        cell.index = indexPath
         cell.configure(item: Memo.list[indexPath.row])
         return cell
     }

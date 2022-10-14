@@ -10,8 +10,9 @@ import UIKit
 class DetailMemoViewController: UIViewController {
     @IBOutlet weak var detailTitle: UITextField!
     @IBOutlet weak var detailMemo: UITextView!
+    @IBOutlet weak var favoriteBtn: UIBarButtonItem!
     
-//    var homeMemo = Memo.list
+    //    var homeMemo = Memo.list
 //    var detailMemoList = DetailMemo.MemoList
     var index = IndexPath()
     
@@ -35,7 +36,9 @@ class DetailMemoViewController: UIViewController {
         
         detailTitle.text = DetailMemo.MemoList[index.row].detailTitle
         detailMemo.text = DetailMemo.MemoList[index.row].detailMemo
-        
+        if DetailMemo.MemoList[index.row].favorite == true {
+            favoriteBtn.image = UIImage(systemName: "star.fill")
+        }
         print("Previous contents were loaded")
     }
     
@@ -66,4 +69,17 @@ class DetailMemoViewController: UIViewController {
         state = CurrentState.delete
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func favoriteBtnTapped(_ sender: UIBarButtonItem) {
+        let favoriteState = DetailMemo.MemoList[index.row].favorite
+        switch favoriteState {
+        case true:
+            favoriteBtn.image = UIImage(systemName: "star")
+            DetailMemo.MemoList[index.row].favorite.toggle()
+        case false:
+            favoriteBtn.image = UIImage(systemName: "star.fill")
+            DetailMemo.MemoList[index.row].favorite.toggle()
+        }
+    }
+    
 }
