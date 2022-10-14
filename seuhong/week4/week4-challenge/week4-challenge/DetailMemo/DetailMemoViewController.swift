@@ -11,9 +11,20 @@ class DetailMemoViewController: UIViewController {
     @IBOutlet weak var detailTitle: UITextField!
     @IBOutlet weak var detailMemo: UITextView!
     
-    var homeMemo = Memo.list
-    var detailMemoList = DetailMemo.MemoList
-    var index = Int()
+//    var homeMemo = Memo.list
+//    var detailMemoList = DetailMemo.MemoList
+    var index = IndexPath()
+    
+    var delegate: DeleteMemoProtocol?
+    
+    enum CurrentState {
+        case edit
+        case delete
+    }
+    
+    // 기본 edit 상태
+    var state = CurrentState.edit
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,20 +32,38 @@ class DetailMemoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("DetailVC will appear")
-        detailTitle.text = detailMemoList[index].detailTitle
-        detailMemo.text = detailMemoList[index].detailMemo
+        
+        detailTitle.text = DetailMemo.MemoList[index.row].detailTitle
+        detailMemo.text = DetailMemo.MemoList[index.row].detailMemo
+        
         print("Previous contents were loaded")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         print("DetailVC will disappear")
-        //home title 변경
-        homeMemo[index].titleLabel = detailTitle.text!
-        //detail 변경
-        detailMemoList[index].detailTitle = detailTitle.text!
-        detailMemoList[index].detailMemo = detailMemo.text!
+        
+        switch state {
+        case .edit :
+            print("현재는 .edit 상태")
+            //title 변경
+            Memo.list[index.row].titleLabel = detailTitle.text!
+            
+            //detail 변경
+            DetailMemo.MemoList[index.row].detailTitle = detailTitle.text!
+            DetailMemo.MemoList[index.row].detailMemo = detailMemo.text!
+            
+            
+        case .delete:
+            print("현재는 .delete 상태")
+            delegate?.deleteMemo(indexPath: index)
+            
+        }
         print("Contents were modified")
         print("-----------------")
     }
     
+    @IBAction func deleteBtnTapped(_ sender: UIBarButtonItem) {
+        state = CurrentState.delete
+        self.navigationController?.popViewController(animated: true)
+    }
 }

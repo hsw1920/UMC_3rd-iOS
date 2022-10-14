@@ -13,14 +13,11 @@ protocol NewMemoProtocol {
 }
 
 class NewMemoViewController: UIViewController {
-    
     @IBOutlet weak var newMemoTitle: UITextField!
     @IBOutlet weak var newMemo: UITextView!
     
-    var delegate: NewMemoProtocol?
+    //var delegate: NewMemoProtocol?
     
-    var memoList = Memo.list
-    var detailMemoList = DetailMemo.MemoList
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,13 +30,13 @@ class NewMemoViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         print("NewMemoVC will disappear")
         
-        // home table의 DB에 title 추가
+        // DB에 title 추가
         let saveTitle = Memo(titleLabel: newMemoTitle.text!)
-        delegate?.setHome(item: saveTitle)
-        
-        // detail memo의 DB에 추가
+        // DB에 detailMemo 추가
         let saveDetailMemo = DetailMemo(detailTitle: newMemoTitle.text!, detailMemo: newMemo.text!)
-        delegate?.setDetail(item: saveDetailMemo)
+        
+        Memo.list.append(saveTitle)
+        DetailMemo.MemoList.append(saveDetailMemo)
         
         print("NewMemo is saved")
         print("-----------------")
