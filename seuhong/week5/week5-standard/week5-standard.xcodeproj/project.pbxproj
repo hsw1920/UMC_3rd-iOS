@@ -18,6 +18,10 @@
 		60677B2729025F4D0037737A /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60677B2029025F4D0037737A /* MemoViewController.swift */; };
 		60677B2829025F4D0037737A /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60677B2129025F4D0037737A /* MemoCell.swift */; };
 		60677B2929025F4D0037737A /* NewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60677B2329025F4D0037737A /* NewMemoViewController.swift */; };
+		60677B2C290262E40037737A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 60677B2B290262E40037737A /* Lottie */; };
+		607E67F82902649A00CD9077 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67F72902649A00CD9077 /* FavoriteViewController.swift */; };
+		607E67FA290268DA00CD9077 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67F9290268DA00CD9077 /* FavoriteCell.swift */; };
+		607E67FC29026B8F00CD9077 /* FavoriteMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67FB29026B8F00CD9077 /* FavoriteMemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,9 @@
 		60677B2029025F4D0037737A /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		60677B2129025F4D0037737A /* MemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		60677B2329025F4D0037737A /* NewMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMemoViewController.swift; sourceTree = "<group>"; };
+		607E67F72902649A00CD9077 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = SOURCE_ROOT; };
+		607E67F9290268DA00CD9077 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		607E67FB29026B8F00CD9077 /* FavoriteMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60677B2C290262E40037737A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +77,8 @@
 				60677B0629025E5C0037737A /* AppDelegate.swift */,
 				60677B0829025E5C0037737A /* SceneDelegate.swift */,
 				60677B0C29025E5C0037737A /* Main.storyboard */,
+				607E67F72902649A00CD9077 /* FavoriteViewController.swift */,
+				607E67F9290268DA00CD9077 /* FavoriteCell.swift */,
 				60677B0F29025E5C0037737A /* Assets.xcassets */,
 				60677B1129025E5C0037737A /* LaunchScreen.storyboard */,
 				60677B1429025E5C0037737A /* Info.plist */,
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				60677B1D29025F4D0037737A /* Memo.swift */,
+				607E67FB29026B8F00CD9077 /* FavoriteMemo.swift */,
 				60677B1E29025F4D0037737A /* DetailMemo.swift */,
 			);
 			path = Model;
@@ -130,6 +141,9 @@
 			dependencies = (
 			);
 			name = "week5-standard";
+			packageProductDependencies = (
+				60677B2B290262E40037737A /* Lottie */,
+			);
 			productName = "week5-standard";
 			productReference = 60677B0329025E5C0037737A /* week5-standard.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 60677AFA29025E5C0037737A;
+			packageReferences = (
+				60677B2A290262E40037737A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 60677B0429025E5C0037737A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,11 +205,14 @@
 				60677B2829025F4D0037737A /* MemoCell.swift in Sources */,
 				60677B2629025F4D0037737A /* DetailMemo.swift in Sources */,
 				60677B0729025E5C0037737A /* AppDelegate.swift in Sources */,
+				607E67F82902649A00CD9077 /* FavoriteViewController.swift in Sources */,
 				60677B2729025F4D0037737A /* MemoViewController.swift in Sources */,
 				60677B0929025E5C0037737A /* SceneDelegate.swift in Sources */,
 				60677B2929025F4D0037737A /* NewMemoViewController.swift in Sources */,
+				607E67FA290268DA00CD9077 /* FavoriteCell.swift in Sources */,
 				60677B2429025F4D0037737A /* DetailMemoViewController.swift in Sources */,
 				60677B2529025F4D0037737A /* Memo.swift in Sources */,
+				607E67FC29026B8F00CD9077 /* FavoriteMemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60677B2A290262E40037737A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60677B2B290262E40037737A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60677B2A290262E40037737A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60677AFB29025E5C0037737A /* Project object */;
 }

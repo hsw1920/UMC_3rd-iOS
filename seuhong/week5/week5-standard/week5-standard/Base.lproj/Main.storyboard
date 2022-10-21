@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L30-De-N0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ohB-v0-8WS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--내 메모장-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MemoViewController" id="BYZ-38-t0r" customClass="MemoViewController" customModule="week4_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoViewController" id="BYZ-38-t0r" customClass="MemoViewController" customModule="week5_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hiF-NE-veh">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoCell" id="aak-NB-UkS" customClass="MemoCell" customModule="week4_challenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoCell" id="aak-NB-UkS" customClass="MemoCell" customModule="week5_standard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aak-NB-UkS" id="4xB-Th-VDy">
@@ -82,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="-28.125"/>
+            <point key="canvasLocation" x="971" y="-28"/>
         </scene>
         <!--메모 수정-->
         <scene sceneID="c15-e2-o3P">
             <objects>
-                <viewController storyboardIdentifier="DetailMemoViewController" id="ZKf-aW-5sW" customClass="DetailMemoViewController" customModule="week4_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailMemoViewController" id="ZKf-aW-5sW" customClass="DetailMemoViewController" customModule="week5_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TOI-8h-RHm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,25 +130,6 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="ogU-FQ-5te"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jfa-j3-eHW"/>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwG-Sx-oS9">
-                                <rect key="frame" x="-1" y="813" width="415" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Item" image="star" catalog="system" id="p8a-S6-P2R">
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
-                                        <connections>
-                                            <action selector="favoriteBtnTapped:" destination="ZKf-aW-5sW" id="Lu5-XC-2aw"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UuS-z1-ROh"/>
-                                    <barButtonItem image="trash" catalog="system" id="JTn-td-bTy">
-                                        <color key="tintColor" red="0.92128556969999997" green="0.026775595579999999" blue="0.021789166249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <connections>
-                                            <action selector="deleteBtnTapped:" destination="ZKf-aW-5sW" id="cyF-x6-mu3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yzc-17-XQ2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,7 +147,22 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC"/>
+                    <navigationItem key="navigationItem" title="메모 수정" id="H2C-qI-pZC">
+                        <rightBarButtonItems>
+                            <barButtonItem image="trash" catalog="system" id="JTn-td-bTy">
+                                <color key="tintColor" red="0.92128556969999997" green="0.026775595579999999" blue="0.021789166249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="deleteBtnTapped:" destination="ZKf-aW-5sW" id="cyF-x6-mu3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="star" catalog="system" id="p8a-S6-P2R">
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="favoriteBtnTapped:" destination="ZKf-aW-5sW" id="Lu5-XC-2aw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailMemo" destination="4BY-hv-GND" id="DDr-8F-jau"/>
@@ -175,12 +172,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rf6-yE-xrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760.8695652173915" y="-28.125"/>
+            <point key="canvasLocation" x="2697" y="-309"/>
         </scene>
         <!--새 메모-->
         <scene sceneID="8O3-qj-oS6">
             <objects>
-                <viewController storyboardIdentifier="NewMemoViewController" id="YZw-AH-dSl" customClass="NewMemoViewController" customModule="week4_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewMemoViewController" id="YZw-AH-dSl" customClass="NewMemoViewController" customModule="week5_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yma-ob-2O8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,12 +240,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rep-D7-RKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760.8695652173915" y="691.74107142857144"/>
+            <point key="canvasLocation" x="2696" y="406"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="L9U-wY-trZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L30-De-N0g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Czz-A5-tBQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="raR-ex-bgG">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
@@ -261,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Etw-BC-Hfk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="-28.125"/>
+            <point key="canvasLocation" x="199" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rns-TG-na1">
@@ -279,7 +277,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2G-5f-1rr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="-28.125"/>
+            <point key="canvasLocation" x="1983" y="-309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecu-h6-eHn">
@@ -297,10 +295,105 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPB-kp-54c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="692"/>
+            <point key="canvasLocation" x="1983" y="406"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sio-FD-VGn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ohB-v0-8WS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zGb-kv-0xC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L30-De-N0g" kind="relationship" relationship="viewControllers" id="D5N-kH-gBK"/>
+                        <segue destination="GEz-Bb-w7Y" kind="relationship" relationship="viewControllers" id="CAa-SQ-PTd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zS3-CY-nJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1209" y="254"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="maY-Jg-79b">
+            <objects>
+                <viewController storyboardIdentifier="TrashViewController" id="GEz-Bb-w7Y" customClass="FavoriteViewController" customModule="week5_standard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fU2-kN-YAN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-Y5-CsI">
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AUm-xM-ueJ">
+                                    <size key="itemSize" width="288" height="260"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteCell" id="MAt-2q-x2p" customClass="FavoriteCell" customModule="week5_standard" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="288" height="260"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZvN-Jg-q9f">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾기 제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVx-qS-oId">
+                                                    <rect key="frame" x="20" y="20" width="135.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLw-Vu-mRk">
+                                                    <rect key="frame" x="20" y="70" width="248" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xLw-Vu-mRk" secondAttribute="trailing" constant="20" id="0d2-NZ-bZw"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JVx-qS-oId" secondAttribute="trailing" constant="1" id="EqM-hC-F4X"/>
+                                                <constraint firstItem="JVx-qS-oId" firstAttribute="top" secondItem="ZvN-Jg-q9f" secondAttribute="top" constant="20" id="SEs-iM-MIq"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xLw-Vu-mRk" secondAttribute="bottom" constant="20" id="bOU-Vk-CDJ"/>
+                                                <constraint firstItem="xLw-Vu-mRk" firstAttribute="leading" secondItem="JVx-qS-oId" secondAttribute="leading" id="mJJ-Lr-2Oo"/>
+                                                <constraint firstItem="xLw-Vu-mRk" firstAttribute="top" secondItem="JVx-qS-oId" secondAttribute="bottom" constant="20" id="qGy-lB-wPj"/>
+                                                <constraint firstItem="JVx-qS-oId" firstAttribute="leading" secondItem="ZvN-Jg-q9f" secondAttribute="leading" constant="20" id="tPw-OM-djG"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <size key="customSize" width="288" height="260"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="xLw-Vu-mRk" id="4n4-ms-5PA"/>
+                                            <outlet property="titleLabel" destination="JVx-qS-oId" id="cSj-F3-jVb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xcl-fE-GLc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xcl-fE-GLc" firstAttribute="trailing" secondItem="zdF-Y5-CsI" secondAttribute="trailing" id="PpI-Sv-Tgh"/>
+                            <constraint firstItem="zdF-Y5-CsI" firstAttribute="top" secondItem="Xcl-fE-GLc" secondAttribute="top" id="X0g-Wc-bGI"/>
+                            <constraint firstItem="Xcl-fE-GLc" firstAttribute="bottom" secondItem="zdF-Y5-CsI" secondAttribute="bottom" id="ibg-L6-EZV"/>
+                            <constraint firstItem="zdF-Y5-CsI" firstAttribute="leading" secondItem="Xcl-fE-GLc" secondAttribute="leading" id="sut-c9-JBd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="RSx-k7-JcT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zdF-Y5-CsI" id="Dav-Wi-cO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIW-oR-vhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="774"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="trash" catalog="system" width="117" height="128"/>
