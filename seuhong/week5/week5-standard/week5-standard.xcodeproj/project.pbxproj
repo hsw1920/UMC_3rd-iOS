@@ -22,6 +22,7 @@
 		607E67F82902649A00CD9077 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67F72902649A00CD9077 /* FavoriteViewController.swift */; };
 		607E67FA290268DA00CD9077 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67F9290268DA00CD9077 /* FavoriteCell.swift */; };
 		607E67FC29026B8F00CD9077 /* FavoriteMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E67FB29026B8F00CD9077 /* FavoriteMemo.swift */; };
+		607E67FE29027EE600CD9077 /* favoriteStar.json in Resources */ = {isa = PBXBuildFile; fileRef = 607E67FD29027EE600CD9077 /* favoriteStar.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		607E67F72902649A00CD9077 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = SOURCE_ROOT; };
 		607E67F9290268DA00CD9077 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		607E67FB29026B8F00CD9077 /* FavoriteMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMemo.swift; sourceTree = "<group>"; };
+		607E67FD29027EE600CD9077 /* favoriteStar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = favoriteStar.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				60677B1F29025F4D0037737A /* MemoHome */,
 				60677B1C29025F4D0037737A /* Model */,
 				60677B2229025F4D0037737A /* NewMemo */,
+				607E67FD29027EE600CD9077 /* favoriteStar.json */,
 			);
 			path = "week5-standard";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				60677B1329025E5C0037737A /* LaunchScreen.storyboard in Resources */,
 				60677B1029025E5C0037737A /* Assets.xcassets in Resources */,
 				60677B0E29025E5C0037737A /* Main.storyboard in Resources */,
+				607E67FE29027EE600CD9077 /* favoriteStar.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

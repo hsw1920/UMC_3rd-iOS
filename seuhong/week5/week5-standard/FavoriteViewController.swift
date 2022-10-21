@@ -16,7 +16,6 @@ class FavoriteViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = .init(top: 10, left: 10, bottom: 10, right: 10)
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
@@ -64,9 +63,7 @@ extension FavoriteViewController: UICollectionViewDataSource {
             cell.configure(item: DetailMemo.MemoList[indexPath.row])
             cell.layer.cornerRadius = 10
         }
-        
-        
-        
+
         return cell
     }
     
