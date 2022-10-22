@@ -240,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rep-D7-RKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2696" y="406"/>
+            <point key="canvasLocation" x="3605.7971014492755" y="405.80357142857139"/>
         </scene>
         <!--Home-->
         <scene sceneID="L9U-wY-trZ">
@@ -295,7 +295,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPB-kp-54c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="406"/>
+            <point key="canvasLocation" x="2892.753623188406" y="405.80357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sio-FD-VGn">
@@ -303,19 +303,20 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ohB-v0-8WS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zGb-kv-0xC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="L30-De-N0g" kind="relationship" relationship="viewControllers" id="D5N-kH-gBK"/>
-                        <segue destination="GEz-Bb-w7Y" kind="relationship" relationship="viewControllers" id="CAa-SQ-PTd"/>
+                        <segue destination="b5K-nl-cPr" kind="relationship" relationship="viewControllers" id="CAa-SQ-PTd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zS3-CY-nJk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1209" y="254"/>
         </scene>
-        <!--Favorite-->
+        <!--Favorite View Controller-->
         <scene sceneID="maY-Jg-79b">
             <objects>
                 <viewController storyboardIdentifier="TrashViewController" id="GEz-Bb-w7Y" customClass="FavoriteViewController" customModule="week5_standard" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zdF-Y5-CsI">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AUm-xM-ueJ">
                                     <size key="itemSize" width="288" height="260"/>
@@ -346,8 +347,8 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdadasdasdad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLw-Vu-mRk">
-                                                    <rect key="frame" x="20" y="70" width="248" height="61"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLw-Vu-mRk">
+                                                    <rect key="frame" x="20" y="70" width="248" height="122"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -382,14 +383,33 @@
                             <constraint firstItem="zdF-Y5-CsI" firstAttribute="leading" secondItem="Xcl-fE-GLc" secondAttribute="leading" id="sut-c9-JBd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="RSx-k7-JcT"/>
+                    <navigationItem key="navigationItem" id="tQc-d0-aDM"/>
                     <connections>
                         <outlet property="collectionView" destination="zdF-Y5-CsI" id="Dav-Wi-cO3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIW-oR-vhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="774"/>
+            <point key="canvasLocation" x="970" y="769"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="Zu4-tw-aue">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b5K-nl-cPr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="RSx-k7-JcT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cwo-03-cLf">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GEz-Bb-w7Y" kind="relationship" relationship="rootViewController" id="3Il-cH-Li2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdl-df-SwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="769"/>
         </scene>
     </scenes>
     <resources>

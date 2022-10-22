@@ -63,18 +63,17 @@ class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol 
     }
     
     func playFavoritePopUp() -> (Void) {
-        
         // 전체화면을 어둡게 할 backgroundView를 생성하고
         lazy var sampleSuperview: UIView = {
             let view = UIView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: view.bounds.height)))
             view.backgroundColor = .gray
+            view.alpha = 0.8
             return view
         }()
         
         // 어두워진 화면위에 Lottie Animation을 넣음
         self.view.addSubview(sampleSuperview)
         sampleSuperview.addSubview(self.popUpFavoriteStar)
-        
         
         self.popUpFavoriteStar.loopMode = .playOnce
         self.popUpFavoriteStar.center = self.view.center
@@ -87,10 +86,7 @@ class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol 
             self.popUpFavoriteStar.removeFromSuperview()
             sampleSuperview.removeFromSuperview()
         }
-        
-        
     }
-    
 }
 
 
@@ -115,22 +111,17 @@ extension MemoViewController: UITableViewDelegate {
         delete.image = UIImage(systemName: "trash")
         
         let favorite = UIContextualAction(style: .normal, title: nil) { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
-            
-            
+
             // false에서 toggle 되었을때만 실행
-            //playFavoritePopUp을 실행하고 background의 alpha를 어둡게
             if(DetailMemo.MemoList[indexPath.row].favorite == false){
                 self.playFavoritePopUp()
-                tableView.backgroundColor = UIColor(white: 1, alpha: 0.5)
             }
             
             DetailMemo.MemoList[indexPath.row].favorite.toggle()
             tableView.reloadData()
-            
         }
         favorite.backgroundColor = .systemYellow
         favorite.image = UIImage(systemName: "star.fill")
-        
         
         return UISwipeActionsConfiguration(actions: [delete,favorite])
     }
@@ -140,8 +131,6 @@ extension MemoViewController: UITableViewDelegate {
 //                print("삭제됨")
 //            }
 //    }
-    
-
 }
 extension MemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
