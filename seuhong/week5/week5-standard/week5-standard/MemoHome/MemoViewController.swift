@@ -14,7 +14,6 @@ protocol DeleteMemoProtocol {
 
 class MemoViewController: UIViewController, NewMemoProtocol, DeleteMemoProtocol {
 
-    
     private let popUpFavoriteStar: LottieAnimationView = {
         let lottieView = LottieAnimationView(name: "favoriteStar")
         lottieView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
