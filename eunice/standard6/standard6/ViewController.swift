@@ -104,7 +104,10 @@ class ViewController: UIViewController {
     // 시작 타이머를 호출하는 함수를 생성
     func startTimer() {
         // 0.1초마다 새로고침 값 함수 호출
-        scheduledTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(refreshValue), userInfo: nil, repeats: true)
+        DispatchQueue.main.async { // 비동기 처리
+            self.scheduledTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.refreshValue), userInfo: nil, repeats: true)
+        }
+        
         // 타이머 계산
         setTimerCounting(true)
         // 정상 상태에 대해 중지하도록 설정
