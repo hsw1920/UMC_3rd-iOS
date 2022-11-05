@@ -1,5 +1,5 @@
 //
-//  TrashViewController.swift
+//  FavoriteViewController.swift
 //  week5-standard
 //
 //  Created by 홍승완 on 2022/10/21.
@@ -19,6 +19,7 @@ class FavoriteViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
+        
     }
     
     
@@ -37,21 +38,26 @@ extension FavoriteViewController: UICollectionViewDelegateFlowLayout {
     }
     
     // 위 아래 간격
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 10
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    // 옆 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 
-        // 옆 간격
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 5
-        }
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailMemoViewController") as? DetailMemoViewController else { return }
+        vc.index = indexPath
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension FavoriteViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var favoriteCount = DetailMemo.MemoList.lazy.filter({ $0.favorite }).count
-        print(favoriteCount)
         return favoriteCount
     }
     
@@ -59,13 +65,13 @@ extension FavoriteViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteCell", for: indexPath) as? FavoriteCell else {
             return UICollectionViewCell()
         }
-        if(DetailMemo.MemoList[indexPath.row].favorite){
+        
+        if(DetailMemo.MemoList[indexPath.row].favorite == true){
+            print("\(indexPath.row) 번째 데이터임 ")
+            print(DetailMemo.MemoList[indexPath.row].favorite)
             cell.configure(item: DetailMemo.MemoList[indexPath.row])
             cell.layer.cornerRadius = 10
         }
-
         return cell
     }
-    
-    
 }
