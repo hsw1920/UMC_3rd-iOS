@@ -76,16 +76,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         if indexCur == 0 {
             if TimerData.list[indexPath.row].time == 0 {
+                print(">>>>>>>>>>>>>>>>>>>>1")
                 var idx = indexCur
                 while(TimerData.list[idx].time == 0){
                     idx+=1;
                 }
                 cell.configure(idx)
-                indexCur = idx
+                print(">>>>>>>>>>>>>>>>>>>>2")
                 print(">>>0 \(TimerData.list[indexCur].time)")
+                indexCur = idx+1
             } else {
                 print(">>>1 \(TimerData.list[indexCur].time)")
                 cell.configure(indexPath.row)
+                indexCur+=1
             }
         } else {
             
@@ -97,13 +100,14 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 }
                 print(">>>2 \(TimerData.list[indexCur].time)")
                 cell.configure(indexCur)
-            } else {
                 indexCur+=1
+            } else {
                 while(TimerData.list[indexCur].time == 0){
                     indexCur+=1;
                 }
                 cell.configure(indexCur)
                 print(">>>3 \(TimerData.list[indexCur].time)")
+                indexCur+=1
             }
         }
         
