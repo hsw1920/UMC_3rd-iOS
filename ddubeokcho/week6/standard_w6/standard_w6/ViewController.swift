@@ -29,12 +29,16 @@ class ViewController: UIViewController {
         
         formatter.locale = Locale(identifier: "ko")
         formatter.dateFormat = "yyyy-MM-dd EEE a hh:mm"
-        IbPickerTime.text = "선택시간 : \(formatter.string(from: datePickerView.date))"
+        UserDefaults.standard.setValue("선택시간 : \(formatter.string(from: datePickerView.date))", forKey: "key")
+
         selectTime = formatter.string(from: datePickerView.date)
     }
     
     
     
+    @IBAction func btn(_ sender: UIButton) {
+        IbPickerTime.text = UserDefaults.standard.string(forKey: "key")
+    }
     //Async Task 1초당 1번씩 구동
     @objc func updateTime() {
         let date = NSDate()
