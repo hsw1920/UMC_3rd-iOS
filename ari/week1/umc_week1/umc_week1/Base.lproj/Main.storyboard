@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="umc_week1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rsd-gg-9M1">
+                                <rect key="frame" x="87" y="407" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xuz-Ks-1kL"/>
+                                    <constraint firstAttribute="width" constant="240" id="whY-Bo-VFG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5QB-RI-QjU">
+                                <rect key="frame" x="87" y="466" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BGf-bj-BAl"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="Xdv-5R-9Sy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="bNI-VI-7x5"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="iFJ-Ga-ePs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="k5g-MK-5wy"/>
+                                    <constraint firstAttribute="width" constant="240" id="vVe-3l-OvV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="03 NAVER Logo_White.png" translatesAutoresizingMaskIntoConstraints="NO" id="KGf-mI-w0H">
+                                <rect key="frame" x="87" y="192" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="47O-qC-LAQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="7pb-Pa-2hE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="EOe-Hy-ANt"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="T0z-CQ-Su1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="gPI-dN-Ou4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLC-lw-1C7">
+                                <rect key="frame" x="170" y="520" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="Rsd-gg-9M1" firstAttribute="leading" secondItem="5QB-RI-QjU" secondAttribute="leading" id="1qf-Mv-06H"/>
+                            <constraint firstItem="Rsd-gg-9M1" firstAttribute="leading" secondItem="KGf-mI-w0H" secondAttribute="leading" id="21t-yr-gMj"/>
+                            <constraint firstItem="Rsd-gg-9M1" firstAttribute="top" secondItem="KGf-mI-w0H" secondAttribute="bottom" constant="87" id="3ZJ-KS-8bB"/>
+                            <constraint firstItem="Rsd-gg-9M1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MwX-QY-Vk1"/>
+                            <constraint firstItem="5QB-RI-QjU" firstAttribute="top" secondItem="Rsd-gg-9M1" secondAttribute="bottom" constant="25" id="eIp-uk-dqb"/>
+                            <constraint firstItem="KGf-mI-w0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="uxf-Pj-Lyn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XjE-ol-PJA">
+            <objects>
+                <viewController id="v2a-VA-x3U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="osq-rn-o7p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WuT-cz-l7n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anH-qj-QF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="-678"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="03 NAVER Logo_White.png" width="1000" height="192"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
