@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카카오계정 (이메일 또는 전화번호)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n2w-p5-bzX">
+                                <rect key="frame" x="100" y="405" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmW-ek-66l">
+                                <rect key="frame" x="100" y="447" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakaotalk_logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bno-GK-ooc">
+                                <rect key="frame" x="87" y="224" width="216" height="102"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2r-l3-Jhr">
+                                <rect key="frame" x="163" y="500" width="65" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96841138601303101" green="0.89382981484380863" blue="0.30506161275691851" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n2w-p5-bzX" secondAttribute="trailing" constant="100" id="7Hf-h2-5fK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bno-GK-ooc" secondAttribute="trailing" constant="87" id="CRf-6l-WY5"/>
+                            <constraint firstItem="n2w-p5-bzX" firstAttribute="top" secondItem="Bno-GK-ooc" secondAttribute="bottom" constant="79" id="Dpv-0j-KCT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x2r-l3-Jhr" secondAttribute="trailing" constant="162" id="FlY-fX-yNT"/>
+                            <constraint firstItem="EmW-ek-66l" firstAttribute="top" secondItem="n2w-p5-bzX" secondAttribute="bottom" constant="8" symbolic="YES" id="ISD-A4-Oz2"/>
+                            <constraint firstItem="EmW-ek-66l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="KgP-Qk-hh3"/>
+                            <constraint firstItem="x2r-l3-Jhr" firstAttribute="top" secondItem="EmW-ek-66l" secondAttribute="bottom" constant="19" id="KhM-zb-zvg"/>
+                            <constraint firstItem="x2r-l3-Jhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="RQH-rW-Rza"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EmW-ek-66l" secondAttribute="trailing" constant="100" id="TrA-DS-lhW"/>
+                            <constraint firstItem="Bno-GK-ooc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="WPf-Ws-gfw"/>
+                            <constraint firstItem="n2w-p5-bzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fic-b6-PsU"/>
+                            <constraint firstItem="n2w-p5-bzX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fvP-C5-o0L"/>
+                            <constraint firstItem="Bno-GK-ooc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="rHv-di-Ywh"/>
+                            <constraint firstItem="x2r-l3-Jhr" firstAttribute="top" secondItem="EmW-ek-66l" secondAttribute="bottom" constant="19" id="wF2-Lu-fBj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kakaotalk_logo2.png" width="276" height="288"/>
+    </resources>
+</document>
