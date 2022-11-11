@@ -7,6 +7,16 @@
 
 import UIKit
 
+class CurIndex {
+    var curIdx: Int
+    init(curIdx: Int) {
+        self.curIdx = curIdx
+    }
+    static var list: [CurIndex] = [
+        
+    ]
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var timerLabel: UILabel!
@@ -27,6 +37,7 @@ class ViewController: UIViewController {
     var timerSet: Bool = false
     var setNum: Int = 0
     
+    //var curIndex: Int = CurIndex.list.count
     var curIndex: Int = TimerData.list.count
     var delegate: TimerProtocol?
     
@@ -56,7 +67,8 @@ class ViewController: UIViewController {
         pauseAnimation()
         //timer?.invalidate()
         TimerData.list[curIndex].timer.invalidate()
-        TimerData.list.remove(at: curIndex)
+//        TimerData.list[CurIndex.list[curIndex].curIdx].timer.invalidate()
+//        TimerData.list.remove(at: curIndex)
         toggleButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
         timerLabel.text = timeFormatter(time: 0)
         remainingLabel.text = timeFormatter(time: 0)
@@ -66,6 +78,8 @@ class ViewController: UIViewController {
         // 꺼져있을 때
         if !timerIsOn {
             if !timerSet {
+                CurIndex.list.append(CurIndex(curIdx: curIndex))
+                print(timerSet)
                 timerSet = true
                 number = hour*3600 + minutes*60 + seconds
                 setNum = number
@@ -76,31 +90,61 @@ class ViewController: UIViewController {
                 timerLabel.isHidden = false
                 picker.isHidden = true
                 
-                print("현재 넘버 : \(number)")
+                //print("현재 넘버 : \(number)")
                 makeCircle(number)
+                
+                
+                // TimerData 리스트에 추가
+                // 시간이 줄어야함 -> 비동기처리
+                TimerData.list.append(TimerData(
+                    time: self.number,
+                    timer: Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+                        DispatchQueue.main.async {
+                            self.timerCallback()
+                            self.delegate?.refreshTable()
+                        }
+                    })
+                ))
+                
             }
-            
+            else {
+                // TimerData 리스트에 추가된거 지우고 다시 추가
+                TimerData.list.remove(at: curIndex)
+                // 시간이 줄어야함 -> 비동기처리
+                TimerData.list.append(TimerData(
+                    time: self.number,
+                    timer: Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+                        DispatchQueue.main.async {
+                            self.timerCallback()
+                            self.delegate?.refreshTable()
+                        }
+                    })
+                ))
+            }
             // pause
             timerIsOn.toggle()
             toggleButton.setImage(UIImage(systemName: "pause.circle"), for: .normal)
             
-            // TimerData 리스트에 추가
-            // 시간이 줄어야함 -> 비동기처리
-            TimerData.list.append(TimerData(
-                time: self.number,
-                timer: Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
-                    DispatchQueue.main.async {
-                        self.timerCallback()
-                        self.delegate?.refreshTable()
-                    }
-                })
-            ))
             
+            
+//            // TimerData 리스트에 추가
+//            // 시간이 줄어야함 -> 비동기처리
+//            TimerData.list.append(TimerData(
+//                time: self.number,
+//                timer: Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+//                    DispatchQueue.main.async {
+//                        self.timerCallback()
+//                        self.delegate?.refreshTable()
+//                    }
+//                })
+//            ))
+ 
             resumeAnimation()
             
         } else { // 켜져있을 때
             // 현재 데이터의 timer 중지
             TimerData.list[curIndex].timer.invalidate()
+//            TimerData.list[CurIndex.list[curIndex].curIdx].timer.invalidate()
             timerIsOn.toggle()
             toggleButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
             pauseAnimation()
@@ -110,13 +154,14 @@ class ViewController: UIViewController {
 
     func timerCallback() {
         number -= 1
-        TimerData.list[curIndex].time = number
         
+        TimerData.list[curIndex].time = number
+//        TimerData.list[CurIndex.list[curIndex].curIdx].time = number
+        print(number)
         // 0초가 되면
         if number == 0 {
             // TimerData 리스트에서 끝내고 중지
             TimerData.list[curIndex].timer.invalidate()
-            TimerData.list.remove(at: curIndex)
             
             timerIsOn.toggle()
             toggleButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
@@ -133,6 +178,8 @@ class ViewController: UIViewController {
             timerLabel.text = timeFormatter(time: 0)
             remainingLabel.text = timeFormatter(time: 0)
             elapsedLabel.text = timeFormatter(time: 0)
+            UserDefaults.standard.setValue(String(Date().description), forKey: "lastTimer")
+            //print("userdefaults :\(UserDefaults.standard.object(forKey: String(curIndex)))")
         }
         else {
             timerLabel.text = timeFormatter(time: number)

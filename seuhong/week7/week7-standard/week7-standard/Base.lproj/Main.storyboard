@@ -12,13 +12,13 @@
         <!--Home View Controller-->
         <scene sceneID="ozv-Sl-13f">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="QTJ-bk-g1z" customClass="HomeViewController" customModule="week6_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="QTJ-bk-g1z" customClass="HomeViewController" customModule="week7_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3PN-qx-Gw1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5R-9Z-mJC">
-                                <rect key="frame" x="126.5" y="762" width="161" height="50"/>
+                                <rect key="frame" x="126.5" y="728" width="161" height="84"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="타이머 추가">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
@@ -34,21 +34,21 @@
                                     <constraint firstAttribute="height" constant="500" id="gga-Em-1B3"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimerCell" id="BER-dS-lgC" customClass="TimerCell" customModule="week6_standard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimerCell" id="BER-dS-lgC" customClass="TimerCell" customModule="week7_standard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BER-dS-lgC" id="CqC-Lt-Mgh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31I-x4-iBC">
-                                                    <rect key="frame" x="20" y="11" width="59" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="59" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-eH-a4l">
-                                                    <rect key="frame" x="99" y="11" width="71" height="21"/>
+                                                    <rect key="frame" x="99" y="11.5" width="71" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -69,22 +69,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1t-7O-UPe">
+                                <rect key="frame" x="20" y="668" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XWf-2T-REW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peJ-5A-H81">
+                                <rect key="frame" x="140" y="806" width="136" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="최근 타이머 시간"/>
+                                <connections>
+                                    <action selector="lastTimerTapped:" destination="QTJ-bk-g1z" eventType="touchUpInside" id="wDQ-ky-kn8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ySM-X7-70n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ySM-X7-70n" firstAttribute="trailing" secondItem="mjY-5d-EKX" secondAttribute="trailing" id="731-ZP-XUm"/>
                             <constraint firstItem="mjY-5d-EKX" firstAttribute="top" secondItem="ySM-X7-70n" secondAttribute="top" id="9UL-TC-ABk"/>
+                            <constraint firstItem="G1t-7O-UPe" firstAttribute="top" secondItem="mjY-5d-EKX" secondAttribute="bottom" constant="76" id="JCc-P9-JID"/>
                             <constraint firstItem="t5R-9Z-mJC" firstAttribute="centerX" secondItem="ySM-X7-70n" secondAttribute="centerX" id="Kh3-J0-Pds"/>
+                            <constraint firstItem="G1t-7O-UPe" firstAttribute="leading" secondItem="ySM-X7-70n" secondAttribute="leading" constant="20" id="MLv-HI-1Fd"/>
                             <constraint firstItem="mjY-5d-EKX" firstAttribute="leading" secondItem="ySM-X7-70n" secondAttribute="leading" id="NWD-nP-nkn"/>
                             <constraint firstItem="mjY-5d-EKX" firstAttribute="trailing" secondItem="ySM-X7-70n" secondAttribute="trailing" id="Qyg-9t-0A4"/>
-                            <constraint firstItem="t5R-9Z-mJC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mjY-5d-EKX" secondAttribute="bottom" constant="30" id="SWg-wm-NtV"/>
                             <constraint firstItem="ySM-X7-70n" firstAttribute="bottom" secondItem="t5R-9Z-mJC" secondAttribute="bottom" constant="50" id="VsQ-6t-kra"/>
+                            <constraint firstItem="t5R-9Z-mJC" firstAttribute="top" secondItem="G1t-7O-UPe" secondAttribute="bottom" constant="20" id="W89-Cd-vBb"/>
                             <constraint firstItem="mjY-5d-EKX" firstAttribute="leading" secondItem="ySM-X7-70n" secondAttribute="leading" id="iPP-JN-XWE"/>
+                            <constraint firstItem="G1t-7O-UPe" firstAttribute="centerX" secondItem="ySM-X7-70n" secondAttribute="centerX" id="zgo-Ta-mVP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wJz-mp-nuz"/>
                     <connections>
+                        <outlet property="lastTimer" destination="G1t-7O-UPe" id="XmN-sH-OzW"/>
                         <outlet property="tableView" destination="mjY-5d-EKX" id="4WB-dq-9xB"/>
                     </connections>
                 </viewController>
@@ -95,7 +117,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="week6_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="week7_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
