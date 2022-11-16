@@ -13,6 +13,11 @@
 		605E39E7292501E600CCF99B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605E39E5292501E600CCF99B /* Main.storyboard */; };
 		605E39E9292501E700CCF99B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605E39E8292501E700CCF99B /* Assets.xcassets */; };
 		605E39EC292501E700CCF99B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605E39EA292501E700CCF99B /* LaunchScreen.storyboard */; };
+		605E39F82925082200CCF99B /* SecondResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E39F32925082200CCF99B /* SecondResultVC.swift */; };
+		605E39F92925082200CCF99B /* FirstResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E39F42925082200CCF99B /* FirstResultVC.swift */; };
+		605E39FA2925082200CCF99B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E39F52925082200CCF99B /* HomeViewController.swift */; };
+		605E39FB2925082200CCF99B /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E39F62925082200CCF99B /* FirstVC.swift */; };
+		605E39FC2925082200CCF99B /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E39F72925082200CCF99B /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		605E39E8292501E700CCF99B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605E39EB292501E700CCF99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		605E39ED292501E700CCF99B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605E39F32925082200CCF99B /* SecondResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondResultVC.swift; sourceTree = "<group>"; };
+		605E39F42925082200CCF99B /* FirstResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstResultVC.swift; sourceTree = "<group>"; };
+		605E39F52925082200CCF99B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		605E39F62925082200CCF99B /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		605E39F72925082200CCF99B /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				605E39E8292501E700CCF99B /* Assets.xcassets */,
 				605E39EA292501E700CCF99B /* LaunchScreen.storyboard */,
 				605E39ED292501E700CCF99B /* Info.plist */,
+				605E39F42925082200CCF99B /* FirstResultVC.swift */,
+				605E39F62925082200CCF99B /* FirstVC.swift */,
+				605E39F52925082200CCF99B /* HomeViewController.swift */,
+				605E39F32925082200CCF99B /* SecondResultVC.swift */,
+				605E39F72925082200CCF99B /* SecondVC.swift */,
 			);
 			path = "week8-standard";
 			sourceTree = "<group>";
@@ -139,8 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				605E39E4292501E600CCF99B /* ViewController.swift in Sources */,
+				605E39F92925082200CCF99B /* FirstResultVC.swift in Sources */,
 				605E39E0292501E600CCF99B /* AppDelegate.swift in Sources */,
+				605E39FB2925082200CCF99B /* FirstVC.swift in Sources */,
 				605E39E2292501E600CCF99B /* SceneDelegate.swift in Sources */,
+				605E39F82925082200CCF99B /* SecondResultVC.swift in Sources */,
+				605E39FC2925082200CCF99B /* SecondVC.swift in Sources */,
+				605E39FA2925082200CCF99B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
