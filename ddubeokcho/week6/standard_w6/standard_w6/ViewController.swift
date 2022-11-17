@@ -16,13 +16,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var IbCurrentTime: UILabel!
     @IBOutlet weak var IbPickerTime: UILabel!
      
+    
+    @IBOutlet weak var alertViewTopConstrain: NSLayoutConstraint!
+    @IBOutlet weak var alertView: UIView!
+    var isActive = true
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        hideAlert()
+        
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
 
+    @IBAction func btnClicked(_ sender: Any) {
+        animateAlert(show: !isActive)
+    }
+    
+    private func animateAlert(show : Bool) {
+        UIView.animate(withDuration: 0.6) { [weak self] in
+            if show {
+                self?.showAlert()
+            }  else {
+                self?.hideAlert()
+            }
+            self?.view.layoutIfNeeded()
+        }
+    }
+    
+    private func showAlert() {
+        isActive = true
+        alertViewTopConstrain.constant = 21
+    }
+    
+    private func hideAlert() {
+        isActive = false
+        alertViewTopConstrain.constant = -(alertView.frame.origin.y) - alertView.frame.height
+    }
+    
     @IBAction func changeDatePicker(_ sender: UIDatePicker) {
         let datePickerView = sender
         let formatter = DateFormatter()

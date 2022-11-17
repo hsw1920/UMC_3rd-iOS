@@ -34,11 +34,41 @@
                                     <action selector="changeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="DvI-33-LpZ"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4c-fk-F02">
-                                <rect key="frame" x="156" y="632" width="67" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shv-BA-No7">
+                                <rect key="frame" x="126" y="744" width="160" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="계정이 맞습니끼"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVb-xI-VBh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCg-8B-WNa">
+                                <rect key="frame" x="20" y="64" width="374" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, KangSeokho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-We-qLi">
+                                        <rect key="frame" x="10" y="20" width="354" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Af5-We-qLi" secondAttribute="bottom" constant="20" id="FyH-LL-vsb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Af5-We-qLi" secondAttribute="trailing" constant="10" id="R4U-Qp-O5w"/>
+                                    <constraint firstItem="Af5-We-qLi" firstAttribute="leading" secondItem="rCg-8B-WNa" secondAttribute="leading" constant="10" id="srv-H4-XtO"/>
+                                    <constraint firstItem="Af5-We-qLi" firstAttribute="top" secondItem="rCg-8B-WNa" secondAttribute="top" constant="20" id="ti5-gL-KIM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4c-fk-F02">
+                                <rect key="frame" x="126" y="653" width="160" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="설정 완료"/>
                                 <connections>
                                     <action selector="btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBf-wr-LQH"/>
                                 </connections>
@@ -47,17 +77,29 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Shv-BA-No7" firstAttribute="top" secondItem="b4c-fk-F02" secondAttribute="bottom" constant="60" id="3dj-cK-Xw4"/>
+                            <constraint firstItem="rCg-8B-WNa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4cW-0C-TL1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rCg-8B-WNa" secondAttribute="trailing" constant="20" id="5j8-cr-kii"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Shv-BA-No7" secondAttribute="trailing" constant="128" id="9sO-Aj-Lkj"/>
                             <constraint firstItem="Vge-1Q-SVz" firstAttribute="top" secondItem="6PQ-gQ-ORD" secondAttribute="bottom" constant="107" id="Axq-Ky-8a2"/>
                             <constraint firstItem="6PQ-gQ-ORD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="JgH-Yb-NSw"/>
                             <constraint firstItem="6PQ-gQ-ORD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="MMa-Id-RYF"/>
                             <constraint firstItem="Yi8-dk-wJY" firstAttribute="top" secondItem="Vge-1Q-SVz" secondAttribute="bottom" constant="63" id="NEp-B5-bbS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b4c-fk-F02" secondAttribute="trailing" constant="128" id="NPJ-Ku-xEQ"/>
+                            <constraint firstItem="Shv-BA-No7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="R74-5X-IE6"/>
+                            <constraint firstItem="b4c-fk-F02" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="ZLD-w4-zdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Shv-BA-No7" secondAttribute="bottom" constant="87" id="b63-UC-nSM"/>
+                            <constraint firstItem="rCg-8B-WNa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f4s-HV-jCu"/>
                             <constraint firstItem="Vge-1Q-SVz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="gYf-QG-lM9"/>
+                            <constraint firstItem="Shv-BA-No7" firstAttribute="top" secondItem="b4c-fk-F02" secondAttribute="bottom" constant="60" id="jPW-CT-B0A"/>
                             <constraint firstItem="Yi8-dk-wJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="mG8-TV-uzO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="IbCurrentTime" destination="6PQ-gQ-ORD" id="ojT-Db-tch"/>
                         <outlet property="IbPickerTime" destination="Yi8-dk-wJY" id="d1K-MK-xuE"/>
+                        <outlet property="alertView" destination="rCg-8B-WNa" id="kTj-xz-9gY"/>
+                        <outlet property="alertViewTopConstrain" destination="4cW-0C-TL1" id="y1J-4G-1Lq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,6 +110,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
