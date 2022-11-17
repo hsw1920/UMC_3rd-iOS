@@ -113,7 +113,8 @@ class ViewController: UIViewController {
         // 정상 상태에 대해 중지하도록 설정
         startStopBtn.setTitle("중지", for:.normal)
         // 일반 상태에 대해 제목 색상을 UI 색상으로 설정
-        // startStopBtn.setTitleColor(UIColor.red, for:.normal)
+        startStopBtn.setTitleColor(UIColor.red, for:.normal)
+        // startStopBtn.backgroundColor = .systemRed
     }
     
     // 새로고침값을 호출하는 함수
