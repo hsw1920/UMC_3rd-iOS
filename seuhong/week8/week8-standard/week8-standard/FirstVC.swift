@@ -7,6 +7,17 @@
 
 import UIKit
 
+func shake(_ sender: UITextField) {
+    let animation = CAKeyframeAnimation()
+    animation.keyPath = "position.x"
+    animation.values = [0, 5, -5, 5, -5, 0 ]
+    animation.keyTimes = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9, 1]
+    animation.duration = 0.6
+    animation.isAdditive = true
+    
+    sender.layer.add(animation, forKey: "shake")
+}
+
 class FirstVC: UIViewController {
     @IBOutlet weak var valueX: UITextField!
     @IBOutlet weak var valueY: UITextField!
@@ -26,6 +37,21 @@ class FirstVC: UIViewController {
 
     @IBAction func calcPlus(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FirstResultVC") as? FirstResultVC else {return}
+        // 추가
+        if valueX.text?.isEmpty == true && valueY.text?.isEmpty == true {
+            shake(valueX)
+            shake(valueY)
+            return
+        }
+        if valueX.text?.isEmpty == true {
+            shake(valueX)
+            return
+        }
+        if valueY.text?.isEmpty == true {
+            shake(valueY)
+            return
+        }
+        // 추가
         x = Int(valueX.text!) ?? 0
         y = Int(valueY.text!) ?? 0
         
@@ -44,6 +70,20 @@ class FirstVC: UIViewController {
     }
     
     @IBAction func calcMinus(_ sender: UIButton) {
+        
+        if valueX.text?.isEmpty == true && valueY.text?.isEmpty == true {
+            shake(valueX)
+            shake(valueY)
+            return
+        }
+        if valueX.text?.isEmpty == true {
+            shake(valueX)
+            return
+        }
+        if valueY.text?.isEmpty == true {
+            shake(valueY)
+            return
+        }
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FirstResultVC") as? FirstResultVC else {return}
         x = Int(valueX.text!) ?? 0
         y = Int(valueY.text!) ?? 0
@@ -61,6 +101,20 @@ class FirstVC: UIViewController {
     }
     
     @IBAction func calcMultiply(_ sender: UIButton) {
+        
+        if valueX.text?.isEmpty == true && valueY.text?.isEmpty == true {
+            shake(valueX)
+            shake(valueY)
+            return
+        }
+        if valueX.text?.isEmpty == true {
+            shake(valueX)
+            return
+        }
+        if valueY.text?.isEmpty == true {
+            shake(valueY)
+            return
+        }
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FirstResultVC") as? FirstResultVC else {return}
         x = Int(valueX.text!) ?? 0
         y = Int(valueY.text!) ?? 0
@@ -78,6 +132,20 @@ class FirstVC: UIViewController {
     }
     
     @IBAction func calcDivide(_ sender: UIButton) {
+        
+        if valueX.text?.isEmpty == true && valueY.text?.isEmpty == true {
+            shake(valueX)
+            shake(valueY)
+            return
+        }
+        if valueX.text?.isEmpty == true {
+            shake(valueX)
+            return
+        }
+        if valueY.text?.isEmpty == true {
+            shake(valueY)
+            return
+        }
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "FirstResultVC") as? FirstResultVC else {return}
         x = Int(valueX.text!) ?? 0
         y = Int(valueY.text!) ?? 0
