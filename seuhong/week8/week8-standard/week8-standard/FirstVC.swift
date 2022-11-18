@@ -33,8 +33,6 @@ class FirstVC: UIViewController {
     var isTapped: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     // 이거 안해주면 FirstVC로 돌아올 때 입력했던 값이 남아있음.
@@ -42,8 +40,7 @@ class FirstVC: UIViewController {
         
         valueX.text = ""
         valueY.text = ""
-        stackViewWidth.constant = 300
-        
+
     }
 
     @IBAction func calcPlus(_ sender: UIButton) {
@@ -79,11 +76,14 @@ class FirstVC: UIViewController {
         UIView.animate(
             withDuration: 0.6,
             animations: {
-                self.stackViewWidth.constant = 0
+                sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 self.view.layoutIfNeeded()
             },
-            completion: {_ in
+            completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
+                UIView.animate(withDuration: 3) {
+                    sender.transform = .identity
+                }
             }
         )
         
@@ -121,11 +121,14 @@ class FirstVC: UIViewController {
         UIView.animate(
             withDuration: 0.6,
             animations: {
-                self.stackViewWidth.constant = 0
+                sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 self.view.layoutIfNeeded()
             },
-            completion: {_ in
+            completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
+                UIView.animate(withDuration: 3) {
+                    sender.transform = .identity
+                }
             }
         )
     }
@@ -162,11 +165,14 @@ class FirstVC: UIViewController {
         UIView.animate(
             withDuration: 0.6,
             animations: {
-                self.stackViewWidth.constant = 0
+                sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 self.view.layoutIfNeeded()
             },
-            completion: {_ in
+            completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
+                UIView.animate(withDuration: 3) {
+                    sender.transform = .identity
+                }
             }
         )
     }
@@ -207,11 +213,14 @@ class FirstVC: UIViewController {
         UIView.animate(
             withDuration: 0.6,
             animations: {
-                self.stackViewWidth.constant = 0
+                sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 self.view.layoutIfNeeded()
             },
-            completion: {_ in
+            completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
+                UIView.animate(withDuration: 3) {
+                    sender.transform = .identity
+                }
             }
         )
     }
