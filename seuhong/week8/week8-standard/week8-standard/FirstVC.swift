@@ -19,20 +19,31 @@ func shake(_ sender: UITextField) {
 }
 
 class FirstVC: UIViewController {
+    @IBOutlet weak var stackView: UIStackView!
+    
     @IBOutlet weak var valueX: UITextField!
     @IBOutlet weak var valueY: UITextField!
     
+    @IBOutlet weak var stackViewWidth: NSLayoutConstraint!
     var x = Int()
     var y = Int()
-
+    
+    var preWidth = CGFloat()
+    var nextWidth = 0.0
+    var isTapped: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     // 이거 안해주면 FirstVC로 돌아올 때 입력했던 값이 남아있음.
     override func viewWillAppear(_ animated: Bool) {
+        
         valueX.text = ""
         valueY.text = ""
+        stackViewWidth.constant = 300
+        
     }
 
     @IBAction func calcPlus(_ sender: UIButton) {
@@ -64,8 +75,17 @@ class FirstVC: UIViewController {
         if valueY.text != "" {
             vc.yLabel = valueY.text!
         } else {vc.yLabel = "0" }
-
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(
+            withDuration: 0.6,
+            animations: {
+                self.stackViewWidth.constant = 0
+                self.view.layoutIfNeeded()
+            },
+            completion: {_ in
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        )
         
     }
     
@@ -97,7 +117,17 @@ class FirstVC: UIViewController {
         if valueY.text != "" {
             vc.yLabel = valueY.text!
         } else {vc.yLabel = "0" }
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(
+            withDuration: 0.6,
+            animations: {
+                self.stackViewWidth.constant = 0
+                self.view.layoutIfNeeded()
+            },
+            completion: {_ in
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        )
     }
     
     @IBAction func calcMultiply(_ sender: UIButton) {
@@ -128,7 +158,17 @@ class FirstVC: UIViewController {
         if valueY.text != "" {
             vc.yLabel = valueY.text!
         } else {vc.yLabel = "0" }
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(
+            withDuration: 0.6,
+            animations: {
+                self.stackViewWidth.constant = 0
+                self.view.layoutIfNeeded()
+            },
+            completion: {_ in
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        )
     }
     
     @IBAction func calcDivide(_ sender: UIButton) {
@@ -151,7 +191,7 @@ class FirstVC: UIViewController {
         y = Int(valueY.text!) ?? 0
         
         if y != 0 {
-            vc.result = String(Double(x)/Double(y))
+            vc.result = String(format: "%.2f", Double(x)/Double(y))
         } else {
             vc.result = "infinite"
         }
@@ -163,7 +203,17 @@ class FirstVC: UIViewController {
         if valueY.text != "" {
             vc.yLabel = valueY.text!
         } else {vc.yLabel = "0" }
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        UIView.animate(
+            withDuration: 0.6,
+            animations: {
+                self.stackViewWidth.constant = 0
+                self.view.layoutIfNeeded()
+            },
+            completion: {_ in
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        )
     }
     
 }

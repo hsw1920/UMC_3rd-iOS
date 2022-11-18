@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2O5-QF-Rr6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2O5-QF-Rr6">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Property 접근-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FirstVC" id="BYZ-38-t0r" customClass="FirstVC" customModule="week3_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" id="BYZ-38-t0r" customClass="FirstVC" customModule="week8_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Property 접근" id="CVM-pO-k7p"/>
                     <connections>
+                        <outlet property="stackView" destination="Tak-J8-f1e" id="va2-HW-jts"/>
+                        <outlet property="stackViewWidth" destination="NQE-Xx-Rrz" id="wkg-Yn-McO"/>
                         <outlet property="valueX" destination="n9X-U7-Gs7" id="ZdA-iV-5Rd"/>
                         <outlet property="valueY" destination="QpN-Fq-Go1" id="nEF-UZ-4Of"/>
                     </connections>
@@ -151,7 +153,7 @@
         <!--Delegate-->
         <scene sceneID="Une-H2-WK0">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" id="Xb7-aI-9fI" customClass="SecondVC" customModule="week3_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="Xb7-aI-9fI" customClass="SecondVC" customModule="week8_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eB-wZ-30y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +243,7 @@
         <!--Second ResultVC-->
         <scene sceneID="4jM-GE-1JQ">
             <objects>
-                <viewController storyboardIdentifier="SecondResultVC" id="WPe-hn-1Do" customClass="SecondResultVC" customModule="week3_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondResultVC" id="WPe-hn-1Do" customClass="SecondResultVC" customModule="week8_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gPF-2p-he8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,7 +386,7 @@
         <!--First ResultVC-->
         <scene sceneID="8uV-0b-Yit">
             <objects>
-                <viewController storyboardIdentifier="FirstResultVC" id="PTp-aS-iHQ" customClass="FirstResultVC" customModule="week3_standard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstResultVC" id="PTp-aS-iHQ" customClass="FirstResultVC" customModule="week8_standard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p1L-U8-XR8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,6 +454,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2O5-QF-Rr6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dXi-BE-2L4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
