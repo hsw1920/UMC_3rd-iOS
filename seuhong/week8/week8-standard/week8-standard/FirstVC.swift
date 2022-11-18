@@ -77,7 +77,6 @@ class FirstVC: UIViewController {
             withDuration: 0.6,
             animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-                self.view.layoutIfNeeded()
             },
             completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -122,7 +121,6 @@ class FirstVC: UIViewController {
             withDuration: 0.6,
             animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-                self.view.layoutIfNeeded()
             },
             completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -166,7 +164,6 @@ class FirstVC: UIViewController {
             withDuration: 0.6,
             animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-                self.view.layoutIfNeeded()
             },
             completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -214,7 +211,6 @@ class FirstVC: UIViewController {
             withDuration: 0.6,
             animations: {
                 sender.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-                self.view.layoutIfNeeded()
             },
             completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
