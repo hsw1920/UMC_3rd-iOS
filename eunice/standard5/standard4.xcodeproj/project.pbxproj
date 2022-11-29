@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4813A23A290DCEC800A49D50 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813A239290DCEC800A49D50 /* SecondViewController.swift */; };
-		48168056290E37B1001F9E88 /* checkbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 48168055290E37B1001F9E88 /* checkbox.json */; };
 		48B305F6290D523800C66220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B305F5290D523800C66220 /* AppDelegate.swift */; };
 		48B305F8290D523800C66220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B305F7290D523800C66220 /* SceneDelegate.swift */; };
 		48B305FA290D523800C66220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B305F9290D523800C66220 /* ViewController.swift */; };
@@ -16,6 +15,7 @@
 		48B305FF290D523900C66220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B305FE290D523900C66220 /* Assets.xcassets */; };
 		48B30602290D523900C66220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B30600290D523900C66220 /* LaunchScreen.storyboard */; };
 		48B3060A290D52E200C66220 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B30609290D52E200C66220 /* TableViewCell.swift */; };
+		48C77C5529275C6800B31261 /* checkbox.json in Resources */ = {isa = PBXBuildFile; fileRef = 48C77C5429275C6800B31261 /* checkbox.json */; };
 		90A6C1756294D18858225A2D /* Pods_standard4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473A1E28BF26C1A0E0B2E14C /* Pods_standard4.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +23,6 @@
 		014A1A24648F0ACA04E142F5 /* Pods-standard4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-standard4.debug.xcconfig"; path = "Target Support Files/Pods-standard4/Pods-standard4.debug.xcconfig"; sourceTree = "<group>"; };
 		473A1E28BF26C1A0E0B2E14C /* Pods_standard4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standard4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4813A239290DCEC800A49D50 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		48168055290E37B1001F9E88 /* checkbox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = checkbox.json; path = ../../../../../checkbox.json; sourceTree = "<group>"; };
 		48B305F2290D523800C66220 /* standard4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = standard4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B305F5290D523800C66220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48B305F7290D523800C66220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		48B30601290D523900C66220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B30603290D523900C66220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B30609290D52E200C66220 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		48C77C5429275C6800B31261 /* checkbox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkbox.json; sourceTree = SOURCE_ROOT; };
 		85FFDB4935EC5812AC1F4E9C /* Pods-standard4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-standard4.release.xcconfig"; path = "Target Support Files/Pods-standard4/Pods-standard4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,6 @@
 		48B305F4290D523800C66220 /* standard4 */ = {
 			isa = PBXGroup;
 			children = (
-				48168055290E37B1001F9E88 /* checkbox.json */,
 				48B305F5290D523800C66220 /* AppDelegate.swift */,
 				48B305F7290D523800C66220 /* SceneDelegate.swift */,
 				48B305F9290D523800C66220 /* ViewController.swift */,
@@ -86,6 +85,7 @@
 				4813A239290DCEC800A49D50 /* SecondViewController.swift */,
 				48B30609290D52E200C66220 /* TableViewCell.swift */,
 				48B305FE290D523900C66220 /* Assets.xcassets */,
+				48C77C5429275C6800B31261 /* checkbox.json */,
 				48B30600290D523900C66220 /* LaunchScreen.storyboard */,
 				48B30603290D523900C66220 /* Info.plist */,
 			);
@@ -160,7 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48168056290E37B1001F9E88 /* checkbox.json in Resources */,
+				48C77C5529275C6800B31261 /* checkbox.json in Resources */,
 				48B30602290D523900C66220 /* LaunchScreen.storyboard in Resources */,
 				48B305FF290D523900C66220 /* Assets.xcassets in Resources */,
 				48B305FD290D523800C66220 /* Main.storyboard in Resources */,

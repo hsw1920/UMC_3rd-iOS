@@ -140,8 +140,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Ai-op-ooY">
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -150,10 +149,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="03O-rp-yyw" firstAttribute="bottom" secondItem="9Ai-op-ooY" secondAttribute="bottom" id="4SU-3x-39p"/>
-                            <constraint firstItem="03O-rp-yyw" firstAttribute="trailing" secondItem="9Ai-op-ooY" secondAttribute="trailing" id="Az5-8f-dfI"/>
-                            <constraint firstItem="9Ai-op-ooY" firstAttribute="leading" secondItem="03O-rp-yyw" secondAttribute="leading" id="L5j-uo-fYT"/>
-                            <constraint firstItem="9Ai-op-ooY" firstAttribute="top" secondItem="03O-rp-yyw" secondAttribute="top" id="zxj-7I-Oh2"/>
+                            <constraint firstItem="9Ai-op-ooY" firstAttribute="leading" secondItem="03O-rp-yyw" secondAttribute="leading" id="I5d-8E-BH5"/>
+                            <constraint firstItem="9Ai-op-ooY" firstAttribute="top" secondItem="03O-rp-yyw" secondAttribute="top" id="bEm-lH-oQT"/>
+                            <constraint firstItem="03O-rp-yyw" firstAttribute="trailing" secondItem="9Ai-op-ooY" secondAttribute="trailing" id="m9N-cN-RM1"/>
+                            <constraint firstItem="03O-rp-yyw" firstAttribute="bottom" secondItem="9Ai-op-ooY" secondAttribute="bottom" id="yZQ-Nr-mXh"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Lhe-sC-lEA" appends="YES" id="T3B-GE-eD9"/>
@@ -191,9 +190,6 @@
     </scenes>
     <resources>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -20,8 +20,8 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
         tapGesture.delegate = self
         
-        self.navigationController?.navigationBar.tintColor = .systemYellow
-        self.view.addGestureRecognizer(tapGesture)
+        self.navigationController?.navigationBar.tintColor = .systemYellow // back 버튼 색변경
+        self.view.addGestureRecognizer(tapGesture) // 제스쳐
         // Do any additional setup after loading the view.
     }
     
@@ -30,8 +30,8 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
         let bar = self.navigationController?.navigationBar
         
         
-        UIView.animate(withDuration: 0.3) {
-            //bar?.alpha = bar?.alpha == 0 ? 1 : 0
+        UIView.animate(withDuration: 0.3) { // 네비게이션 바 사라지기
+            bar?.alpha = bar?.alpha == 0 ? 1 : 0
             self.view.endEditing(true)
         }
         
