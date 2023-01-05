@@ -98,7 +98,10 @@ class ViewController: UIViewController {
         // 정상 상태에 대해 중지하도록 설정
         startStopBtn.setTitle("시작", for:.normal)
         // 일반 상태에 대해 제목 색상을 UI 색상으로 설정
-        startStopBtn.setTitleColor(UIColor.systemGreen, for:.normal)
+        startStopBtn.setTitleColor(UIColor.white, for:.normal)
+        startStopBtn.backgroundColor = .systemGreen
+        
+        print(timeLabel.text!)
     }
 
     // 시작 타이머를 호출하는 함수를 생성
@@ -113,8 +116,9 @@ class ViewController: UIViewController {
         // 정상 상태에 대해 중지하도록 설정
         startStopBtn.setTitle("중지", for:.normal)
         // 일반 상태에 대해 제목 색상을 UI 색상으로 설정
-        startStopBtn.setTitleColor(UIColor.red, for:.normal)
-        // startStopBtn.backgroundColor = .systemRed
+        startStopBtn.setTitleColor(UIColor.white, for:.normal)
+        startStopBtn.backgroundColor = .systemRed
+        
     }
     
     // 새로고침값을 호출하는 함수
@@ -148,7 +152,7 @@ class ViewController: UIViewController {
     }
     
     // 시간, 분, 초를 사용하여 문자열로 변환
-    func makeTimeString (hour: Int, min: Int, sec: Int) -> String {
+    func makeTimeString (hour:Int, min: Int, sec: Int) -> String {
         var timeString = ""
         timeString += String(format:"%02d", hour)
         timeString += ":"
@@ -166,7 +170,7 @@ class ViewController: UIViewController {
         setStartTime(date: nil)
         
         // 0으로 초기화
-        timeLabel.text = makeTimeString(hour: 0, min: 0, sec: 0)
+        timeLabel.text = makeTimeString(hour:0, min: 0, sec: 0)
         
         // 중지 타이머
         stopTimer()
